@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>docker on (Machine) Learning log.</title>
+    <link>https://adamoudad.github.io/tags/docker/</link>
+    <description>Recent content in docker on (Machine) Learning log.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 06 Apr 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://adamoudad.github.io/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Your python interpreter inside a docker container with Emacs</title>
+      <link>https://adamoudad.github.io/posts/emacs/docker-python-shell-emacs/</link>
+      <pubDate>Mon, 06 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://adamoudad.github.io/posts/emacs/docker-python-shell-emacs/</guid>
+      <description>Emacs has this very powerful package Elpy which is usually recommended if you want to code in Python.
+ Docker can containerize your Python interpreter so that you can seemlessly run your applications on any device.
+ In Emacs with elpy installed, C-c C-c binding (C is for Control key) runs elpy-shell-send-region-to-buffer and is very handy for running on the fly python commands for testing your code. It actually use the content of the variable python-shell-interpreter for the python interpreter.</description>
+    </item>
+    
+  </channel>
+</rss>

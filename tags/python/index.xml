@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>python on (Machine) Learning log.</title>
+    <link>https://adamoudad.github.io/tags/python/</link>
+    <description>Recent content in python on (Machine) Learning log.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 24 Feb 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://adamoudad.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Monty Hall problem... Should I stay or should I change?</title>
+      <link>https://adamoudad.github.io/posts/monty-hall/</link>
+      <pubDate>Sat, 24 Feb 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://adamoudad.github.io/posts/monty-hall/</guid>
+      <description>If you set up a lottery game, and your game happens to have some flaws, it is a bad idea to let mathematicians participate. They would just ruin the game1!
+ But there is no superpower needed, it is just statistics. Moreover, with computing, we can simulate and understand better games involving randomness.
+ In this article, we will see if we can find some mathematician&amp;#39;s hacks to a popular TV game requiring psychology and some calculations.</description>
+    </item>
+    
+    <item>
+      <title>These Python keywords will simplify your code</title>
+      <link>https://adamoudad.github.io/posts/python-statements/</link>
+      <pubDate>Sun, 16 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://adamoudad.github.io/posts/python-statements/</guid>
+      <description>Python embeds very nifty keywords and writing shorthands to help us in the writing of code that is short and easy to read. In the following, I will review some which are often overlooked.
+Control the flow of execution, and filter data on the fly  You may have to work with raw data, with unpredictable structure. Loading or processing such data will likely raise many errors. Here is a way to ignore some minor inconsistencies and at least run your script for, say, a proof of concept.</description>
+    </item>
+    
+    <item>
+      <title>How many patterns are there to lock your android smartphone?</title>
+      <link>https://adamoudad.github.io/posts/lock_pattern/</link>
+      <pubDate>Sat, 16 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://adamoudad.github.io/posts/lock_pattern/</guid>
+      <description>If you own an Android smartphone, you are familiar with that pattern you chose to lock your phone with. Every time, you pick your phone and mechanically draw these lines on your screen, connecting the dots to form the unlock pattern.
+  Android lockscreen.
+   This lock mechanism is more intuitive than using a sequence of numbers (such as PIN), but has its drawbacks, as research papers show how you can efficiently guess the unlock pattern from</description>
+    </item>
+    
+    <item>
+      <title>Training models with a progress bar</title>
+      <link>https://adamoudad.github.io/posts/progress_bar_with_tqdm/</link>
+      <pubDate>Mon, 12 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://adamoudad.github.io/posts/progress_bar_with_tqdm/</guid>
+      <description>tqdm 1is a Python library for adding progress bar. It lets you configure and display a progress bar with metrics you want to track. Its ease of use and versatility makes it the perfect choice for tracking machine learning experiments.
+ I organize this tutorial in two parts. I will first introduce tqdm, then show an example for machine learning. For each code fragment in this article, we will import the sleep function from Python&amp;#39;s time library as it will let us slow down the program to see the progress bar update.</description>
+    </item>
+    
+    <item>
+      <title>How to format dates in Python3</title>
+      <link>https://adamoudad.github.io/posts/format-dates-python3/</link>
+      <pubDate>Tue, 04 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://adamoudad.github.io/posts/format-dates-python3/</guid>
+      <description>You have probably used Python&amp;#39;s formatting syntax before. But how do you format a date? With datetime objects, you can use %Y, %m, %d to display respectively, the year, the month and the day of an object, in numerical form (that is, March will be replaced by the number &amp;#34;03&amp;#34;).
+ Python has several syntax for formatting strings. So that each of these lines will produce the same output.</description>
+    </item>
+    
+    <item>
+      <title>Schedule random aphorism notifications for your desktop</title>
+      <link>https://adamoudad.github.io/posts/random-aphorism-notifications/</link>
+      <pubDate>Thu, 18 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://adamoudad.github.io/posts/random-aphorism-notifications/</guid>
+      <description>In times when we lack inspiration, it might help to have a program randomly picking an aphorism for us. An aphorism is a concise expression of a general truth or principle. But you can also use a joke or anything else.
+ Let&amp;#39;s see how we can implement this with desktop notifications, python, and cron.
+Requirements  You will need these
+ python3 with notify2 library. Install it with pip install notify2 a notification daemon.</description>
+    </item>
+    
+    <item>
+      <title>Have a bot haunt your Slack workspace</title>
+      <link>https://adamoudad.github.io/posts/python-slack-bot/</link>
+      <pubDate>Thu, 21 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://adamoudad.github.io/posts/python-slack-bot/</guid>
+      <description>In this article we&amp;#39;ll see how to code your simple bot for Slack, and schedule it to run regularily. As some testing might be necessary, I recommend to create a dummy Slack workspace for this tutorial.
+Add a webhook for your Slack workspace  We first need to configure a web hook to communicate to our Slack workspace. Go to this url, choose your channel and click on add a webhook.</description>
+    </item>
+    
+    <item>
+      <title>Data processing libraries in Python</title>
+      <link>https://adamoudad.github.io/posts/data-processing-libraries/</link>
+      <pubDate>Tue, 12 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://adamoudad.github.io/posts/data-processing-libraries/</guid>
+      <description>With most popular libraries and most of bleeding-edge technologies implemented, Python is usually recommended as a good choice for machine learning related projects. Yet it can be daunting when looking at all different libraries that exist, and difficult to choose a couple to get started.
+ Machine learning is founded on data processing, and performances of models will heavily depend on your ability to read and transform data in a suitable format for the task you wish to do.</description>
+    </item>
+    
+    <item>
+      <title>Your python interpreter inside a docker container with Emacs</title>
+      <link>https://adamoudad.github.io/posts/emacs/docker-python-shell-emacs/</link>
+      <pubDate>Mon, 06 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://adamoudad.github.io/posts/emacs/docker-python-shell-emacs/</guid>
+      <description>Emacs has this very powerful package Elpy which is usually recommended if you want to code in Python.
+ Docker can containerize your Python interpreter so that you can seemlessly run your applications on any device.
+ In Emacs with elpy installed, C-c C-c binding (C is for Control key) runs elpy-shell-send-region-to-buffer and is very handy for running on the fly python commands for testing your code. It actually use the content of the variable python-shell-interpreter for the python interpreter.</description>
+    </item>
+    
+    <item>
+      <title>Deciphering Python&#39;s &#34;import this&#34;</title>
+      <link>https://adamoudad.github.io/posts/zen-of-python/</link>
+      <pubDate>Wed, 12 Feb 2020 03:49:04 +0900</pubDate>
+      
+      <guid>https://adamoudad.github.io/posts/zen-of-python/</guid>
+      <description>Among well known easter eggs, Python embeds a library for displaying its famous PEP 20, called Zen of Python, which consists in 19 aphorisms giving guidelines to Python programmers.
+Print Zen of Python  You can print the 19 aphorisms by simply importing this.
+import this  This outputs
+The Zen of Python, by Tim Peters Beautiful is better than ugly. Explicit is better than implicit. Simple is better than complex.</description>
+    </item>
+    
+    <item>
+      <title>Tips to write pythonic</title>
+      <link>https://adamoudad.github.io/posts/pythonic/</link>
+      <pubDate>Sun, 02 Feb 2020 03:49:04 +0900</pubDate>
+      
+      <guid>https://adamoudad.github.io/posts/pythonic/</guid>
+      <description>Python community has a special words for talking about code that follows the best practices for writing in python, pythonic. The following are some tips to make the most of Python programming language.
+ I recommend as reference the PEP-81 (Python Enhancement Proposal) document which provides guidelines and best practices on how to write Python code. It enables to achieve better readability and consistency throughout code.
+Naming   Never use l, 0 or I for variable names, as these can be mistaken for 1 and 0.</description>
+    </item>
+    
+  </channel>
+</rss>

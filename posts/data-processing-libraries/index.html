@@ -1,0 +1,668 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+<title>Data processing libraries in Python - (Machine) Learning log.</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="monetization" content="$ilp.uphold.com/iN8Xkq2iHNHB">
+
+
+<meta name="generator" content="Hugo 0.99.1" /><meta itemprop="name" content="Data processing libraries in Python">
+<meta itemprop="description" content="With most popular libraries and most of bleeding-edge technologies implemented, Python is usually recommended as a good choice for machine learning related projects. Yet it can be daunting when looking at all different libraries that exist, and difficult to choose a couple to get started.
+ Machine learning is founded on data processing, and performances of models will heavily depend on your ability to read and transform data in a suitable format for the task you wish to do."><meta itemprop="datePublished" content="2020-05-12T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2020-05-12T00:00:00+00:00" />
+<meta itemprop="wordCount" content="764">
+<meta itemprop="keywords" content="machine-learning,python," /><meta property="og:title" content="Data processing libraries in Python" />
+<meta property="og:description" content="With most popular libraries and most of bleeding-edge technologies implemented, Python is usually recommended as a good choice for machine learning related projects. Yet it can be daunting when looking at all different libraries that exist, and difficult to choose a couple to get started.
+ Machine learning is founded on data processing, and performances of models will heavily depend on your ability to read and transform data in a suitable format for the task you wish to do." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://adamoudad.github.io/posts/data-processing-libraries/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-05-12T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-05-12T00:00:00+00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Data processing libraries in Python"/>
+<meta name="twitter:description" content="With most popular libraries and most of bleeding-edge technologies implemented, Python is usually recommended as a good choice for machine learning related projects. Yet it can be daunting when looking at all different libraries that exist, and difficult to choose a couple to get started.
+ Machine learning is founded on data processing, and performances of models will heavily depend on your ability to read and transform data in a suitable format for the task you wish to do."/>
+<meta name="twitter:site" content="@OudadAdam"/>
+<link rel="stylesheet" href="/css/bundle.min.262e62e9c1615dd1ac95d339cfc4ca2167aee72b71d853838920a22e7088b06b.css" integrity="sha256-Ji5i6cFhXdGsldM5z8TKIWeu5ytx2FODiSCiLnCIsGs=">
+        <link rel="stylesheet" href="/css/add-on.css">
+</head>
+
+  <body>
+    
+<header id="site-header">
+  <nav id="site-nav">
+    <h1 class="nav-title">
+      <a href="/">
+        
+          
+            posts
+          
+        
+      </a>
+    </h1>
+    <menu id="site-nav-menu" class="flyout-menu">
+      
+        
+          
+          
+            <a href="/" class="link"><i class='fa fa-home'></i> Home</a>
+          
+        
+      
+        
+          
+          
+            <a href="/about/" class="link"><i class='far fa-id-card'></i> About</a>
+          
+        
+      
+        
+          
+          
+            <a href="/posts/" class="link"><i class='far fa-newspaper'></i> Posts</a>
+          
+        
+      
+        
+          
+          
+            <a href="/categories/" class="link"><i class='fas fa-sitemap'></i> Categories</a>
+          
+        
+      
+      <a href="#share-menu" class="share-toggle"><i class="fas fa-share-alt">&nbsp;</i>Share</a>
+      
+
+    </menu>
+    
+
+    <a href="#share-menu" class="share-toggle"><i class="fas fa-share-alt fa-2x">&nbsp;</i></a>
+    <a href="#lang-menu" class="lang-toggle" lang="en">en</a>
+    <a href="#site-nav" class="nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
+  </nav>
+  <menu id="lang-menu" class="flyout-menu">
+  <a href="#" lang="en" class="link active">English (en)</a>
+  
+    
+      
+    
+      
+        <a href="/fr" lang="fr" class="no-lang link">Français (fr)</a>
+      
+    
+  
+</menu>
+
+  
+    <menu id="share-menu" class="flyout-menu">
+      <h1>Share Post</h1>
+      
+
+
+
+
+  
+    
+    <a href="//twitter.com/share?text=Data%20processing%20libraries%20in%20Python&amp;url=https%3a%2f%2fadamoudad.github.io%2fposts%2fdata-processing-libraries%2f" target="_blank" rel="noopener" class="share-btn twitter">
+        <i class="fab fa-twitter"></i><p>&nbsp;Twitter</p>
+      </a>
+  
+
+  
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fadamoudad.github.io%2fposts%2fdata-processing-libraries%2f&amp;title=Data%20processing%20libraries%20in%20Python" target="_blank" rel="noopener" class="share-btn linkedin">
+            <i class="fab fa-linkedin"></i><p>&nbsp;LinkedIn</p>
+          </a>
+  
+
+
+    </menu>
+  
+</header>
+
+    <div id="wrapper">
+      <section id="site-intro" >
+  <a href="/"><img src="/avatar.png" class="circle" width="150" alt="Adam Oudad" /></a>
+  <header>
+    <h1>Adam Oudad</h1>
+  </header>
+  <main>
+    <p>(Machine) Learning log.</p>
+  </main>
+  
+    <footer>
+      <ul class="socnet-icons">
+        
+
+        <li><a href="//github.com/adamoudad" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+
+<li><a href="//stackoverflow.com/users/7013114/adam-oudad" target="_blank" rel="noopener" title="Stack Overflow" class="fab fa-stack-overflow"></a></li>
+
+
+
+
+
+
+
+
+<li><a href="//medium.com/@adam.oudad" target="_blank" rel="noopener" title="Medium" class="fab fa-medium"></a></li>
+<li><a href="//linkedin.com/in/adamoudad" target="_blank" rel="noopener" title="LinkedIn" class="fab fa-linkedin"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//twitter.com/OudadAdam" target="_blank" rel="noopener" title="Twitter" class="fab fa-twitter"></a></li>
+
+
+
+
+
+
+
+<li><a href="//researchgate.net/profile/Adam_Oudad" target="_blank" rel="noopener" title="Research Gate"><i class="ai ai-researchgate"></i></a></li>
+
+
+
+
+
+      </ul>
+    </footer>
+  
+</section>
+
+      <main id="site-main">
+        <article class="post">
+  <header>
+  <div class="title">
+    
+        <h2><a href="/posts/data-processing-libraries/">Data processing libraries in Python</a></h2>
+    
+    
+</div>
+  <div class="meta">
+    <time class="published" datetime="2020-05-12 00:00:00 &#43;0000 UTC">
+      May 12, 2020
+    </time>
+    <span class="author"></span>
+    
+      <p>4 minutes read</p>
+    
+  </div>
+</header>
+
+  <section id="socnet-share">
+    
+
+
+
+
+  
+    
+    <a href="//twitter.com/share?text=Data%20processing%20libraries%20in%20Python&amp;url=https%3a%2f%2fadamoudad.github.io%2fposts%2fdata-processing-libraries%2f" target="_blank" rel="noopener" class="share-btn twitter">
+        <i class="fab fa-twitter"></i><p>&nbsp;Twitter</p>
+      </a>
+  
+
+  
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fadamoudad.github.io%2fposts%2fdata-processing-libraries%2f&amp;title=Data%20processing%20libraries%20in%20Python" target="_blank" rel="noopener" class="share-btn linkedin">
+            <i class="fab fa-linkedin"></i><p>&nbsp;LinkedIn</p>
+          </a>
+  
+
+
+  </section>
+  
+
+  <div class="content">
+    
+<p>
+With most popular libraries and most of bleeding-edge technologies implemented, Python is usually recommended as a good choice for machine learning related projects. Yet it can be daunting when looking at all different libraries that exist, and difficult to choose a couple to get started.</p>
+<p>
+Machine learning is founded on data processing, and performances of models will heavily depend on your ability to read and transform data in a suitable format for the task you wish to do. In this article, we will go over different libraries, with respect to the type of data they can handle.</p>
+<div id="outline-container-headline-1" class="outline-3">
+<h3 id="headline-1">
+Tabular data
+</h3>
+<div id="outline-text-headline-1" class="outline-text-3">
+<p>Tabular data is most of what we call sometimes <em>big data</em>, as it appears in the form of loosely organised rows corresponding to samples and columns, corresponding to features (most of the time at least).
+   <a href="https://pandas.pydata.org/">Pandas</a> is the library that can handle such data. Created for the use of stock markets that heavily require operations on series, such as moving averages, it has evolved in a full-featured library that can handle well tabular data.
+   Here is an example.</p>
+<div class="src src-python">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span>df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame(<span style="color:#e6db74">&#39;data.csv&#39;</span>)
+</span></span><span style="display:flex;"><span>df<span style="color:#f92672">.</span>head()               <span style="color:#75715e"># Prints head of the table</span>
+</span></span><span style="display:flex;"><span>df<span style="color:#f92672">.</span>describe()           <span style="color:#75715e"># Describes each column with common statistics</span>
+</span></span><span style="display:flex;"><span>df<span style="color:#f92672">.</span>prices<span style="color:#f92672">.</span>plot()        <span style="color:#75715e"># Will plot column &#34;prices&#34;</span></span></span></code></pre></div>
+</div>
+<p>As you can see, syntax is quite easy to understand. A sometimes difficult part to understand is the way <code>pandas</code> manages indexing and selecting. It comes down to the what you define as your index column. If no arguments are passed to <code>pd.DataFrame</code>, pandas creates a index column it increments at each row. You can use different ways for selecting a range of values.</p>
+</div>
+</div>
+<div id="outline-container-headline-2" class="outline-3">
+<h3 id="headline-2">
+Text data
+</h3>
+<div id="outline-text-headline-2" class="outline-text-3">
+<p>It is first important to note that Python comes with quite a lot of powerful built-in text-processing capabilities.</p>
+<div class="src src-python">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>raw_data <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Some text&#34;</span>
+</span></span><span style="display:flex;"><span>processed_data <span style="color:#f92672">=</span> raw_data<span style="color:#f92672">.</span>lower()
+</span></span><span style="display:flex;"><span>processed_data <span style="color:#f92672">=</span> raw_data<span style="color:#f92672">.</span>strip()</span></span></code></pre></div>
+</div>
+<p>Yet natural language processing involves many processing techniques, such as tokenization, lemmatization, which are doable using <a href="https://www.nltk.org/">NLTK</a>.</p>
+<div class="src src-python">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> nltk
+</span></span><span style="display:flex;"><span>nltk<span style="color:#f92672">.</span>download()
+</span></span><span style="display:flex;"><span>tokens <span style="color:#f92672">=</span> nltk<span style="color:#f92672">.</span>tokenize(s)</span></span></code></pre></div>
+</div>
+<p>For more advanced natural language processing, and if you are aiming for optimized pipelines, <a href="https://spacy.io/">spacy</a> is a solid choice.</p>
+</div>
+</div>
+<div id="outline-container-headline-3" class="outline-3">
+<h3 id="headline-3">
+Audio and musical data
+</h3>
+<div id="outline-text-headline-3" class="outline-text-3">
+<p>Audio processing is enabled with libraries such as <a href="https://librosa.github.io/librosa/">librosa</a> and <a href="https://essentia.upf.edu/">essentia</a> for audio processing. These are very popular libraries among music information retrieval research community for example.</p>
+<p>
+   For symbolic music, that is when working with MIDI for example, <a href="https://mido.readthedocs.io/en/latest/">mido</a> and <a href="https://craffel.github.io/pretty-midi/">pretty_midi</a> are a good choice. More advanced, there is <a href="https://web.mit.edu/music21/">music21</a>, a powerful library which is aimed mainly at musicology analysis, with wide range of abstractions, for example dividing a score into Stream, Part, Track and Measure objects. It also has a straightforward syntax.</p>
+<div class="src src-python">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> music21 <span style="color:#f92672">import</span> converter
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> music21 <span style="color:#f92672">import</span> note, chord
+</span></span><span style="display:flex;"><span>midi <span style="color:#f92672">=</span> converter<span style="color:#f92672">.</span>parse(<span style="color:#e6db74">&#39;file.mid&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Lets print out notes and chords of the MIDI file</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> element <span style="color:#f92672">in</span> midi<span style="color:#f92672">.</span>flat:
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">if</span> isinstance(element, note<span style="color:#f92672">.</span>Note):
+</span></span><span style="display:flex;"><span>     print(<span style="color:#e6db74">&#34;We have the note </span><span style="color:#e6db74">{}</span><span style="color:#e6db74"> of duration </span><span style="color:#e6db74">{}</span><span style="color:#e6db74"> at offset time </span><span style="color:#e6db74">{}</span><span style="color:#e6db74">&#34;</span><span style="color:#f92672">.</span>format(
+</span></span><span style="display:flex;"><span>         element<span style="color:#f92672">.</span>pitch,
+</span></span><span style="display:flex;"><span>         element<span style="color:#f92672">.</span>quarterLength,
+</span></span><span style="display:flex;"><span>         element<span style="color:#f92672">.</span>offset
+</span></span><span style="display:flex;"><span>     ) )
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">elif</span> isinstance(element, chord<span style="color:#f92672">.</span>Chord):
+</span></span><span style="display:flex;"><span>     print(<span style="color:#e6db74">&#34;We have the chord </span><span style="color:#e6db74">{}</span><span style="color:#e6db74"> of duration </span><span style="color:#e6db74">{}</span><span style="color:#e6db74"> at offset time </span><span style="color:#e6db74">{}</span><span style="color:#e6db74">&#34;</span><span style="color:#f92672">.</span>format(
+</span></span><span style="display:flex;"><span>         element<span style="color:#f92672">.</span>name,
+</span></span><span style="display:flex;"><span>         element<span style="color:#f92672">.</span>quarterLength,
+</span></span><span style="display:flex;"><span>         element<span style="color:#f92672">.</span>offset
+</span></span><span style="display:flex;"><span>     ) )
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Music21 has some nice display functions</span>
+</span></span><span style="display:flex;"><span>midi<span style="color:#f92672">.</span>show(<span style="color:#e6db74">&#34;text&#34;</span>)               <span style="color:#75715e"># Print out all MIDI file with indentation reflecting hierarchy</span>
+</span></span><span style="display:flex;"><span>midi<span style="color:#f92672">.</span>measures(<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">10</span>)<span style="color:#f92672">.</span>show(<span style="color:#e6db74">&#34;midi&#34;</span>)               <span style="color:#75715e"># Show a PNG image of the score from measures 5 to 10</span>
+</span></span><span style="display:flex;"><span>midi<span style="color:#f92672">.</span>measures(<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">10</span>)<span style="color:#f92672">.</span>plot()                     <span style="color:#75715e"># Display pianoroll of measures 5 to 10</span></span></span></code></pre></div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-4" class="outline-3">
+<h3 id="headline-4">
+Images
+</h3>
+<div id="outline-text-headline-4" class="outline-text-3">
+<p><a href="https://python-pillow.org/">Pillow</a> is the library in Python for handling images. It can do what an image editor program would do.</p>
+<div class="src src-python">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> PIL <span style="color:#f92672">import</span> Image, ImageFilter
+</span></span><span style="display:flex;"><span>im <span style="color:#f92672">=</span> Image<span style="color:#f92672">.</span>open(<span style="color:#e6db74">&#39;/home/adam/Pictures/test.png&#39;</span>)
+</span></span><span style="display:flex;"><span>new_im <span style="color:#f92672">=</span> im<span style="color:#f92672">.</span>rotate(<span style="color:#ae81ff">90</span>)<span style="color:#f92672">.</span>filter(ImageFilter<span style="color:#f92672">.</span>GaussianBlur())</span></span></code></pre></div>
+</div>
+<p><a href="https://scikit-image.org/">scikit-image</a> is also used for image processing, and provides most of filters and algorithms. <a href="https://opencv.org/">opencv</a> is a library aimed at computer vision, and can serve for processing videos or working with data from a camera.
+   If you work with uncommon or very specific image formats, <a href="https://imageio.github.io/">imageio</a> will be able to provide the image data to your python script thanks to its <a href="https://imageio.readthedocs.io/en/stable/formats.html">wide range of supported format</a>.</p>
+</div>
+</div>
+<div id="outline-container-headline-5" class="outline-3">
+<h3 id="headline-5">
+Numerical data
+</h3>
+<div id="outline-text-headline-5" class="outline-text-3">
+<p>All above libraries have the power to read specific data formats. When this is converted in python objects and data structures, <a href="https://numpy.org/">numpy</a> usually comes into play, to manipulate these numerical values.</p>
+<p>
+   Before getting deep learning bazookas out, it is recommended to perform some analysis of the data, using <a href="https://scikit-learn.org/">sklearn</a>, <a href="https://scipy.org/">scipy</a> and/or <a href="https://seaborn.pydata.org/">seaborn</a>.</p>
+</div>
+</div>
+<div id="outline-container-headline-6" class="outline-3">
+<h3 id="headline-6">
+Conclusion
+</h3>
+<div id="outline-text-headline-6" class="outline-text-3">
+<p>Once all this data processing and analysis is performed, we get enough information on the data to consider what model to choose for our task, and hopefully machine learning techniques can be unfolded at their full potential.</p>
+<p>
+   This article covers most used libraries with respect to the type of data we want to process. These libraries are the ones commonly used in machine learning courses, and there is nothing better than building some experience using these tools on practical problems!</p>
+</div>
+</div>
+
+  </div>
+  <footer>
+    <ul class="stats">
+  
+    
+    
+      <li class="categories">
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://adamoudad.github.io/categories/machine-learning">Machine Learning</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://adamoudad.github.io/categories/programming">Programming</a></li>
+          
+        </ul>
+      </li>
+    
+  
+  
+    
+    
+      <li class="tags">
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://adamoudad.github.io/tags/machine-learning">machine-learning</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://adamoudad.github.io/tags/python">python</a></li>
+          
+        </ul>
+      </li>
+    
+  
+</ul>
+
+  </footer>
+</article>
+
+    <article class="post">
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "adamoudad-github-io" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </article>
+
+
+
+
+<div class="pagination">
+  
+    <a href="/posts/emacs/docker-python-shell-emacs/" class="button"><div class="previous"><div>Your python interpreter inside a docker container with Emacs</div></div></a>
+  
+  
+    <a href="/posts/python-slack-bot/" class="button"><div class="next"><div>Have a bot haunt your Slack workspace</div></div></a>
+  
+</div>
+
+
+      </main>
+      <section id="site-sidebar">
+  
+    <section id="recent-posts">
+      <header>
+        <h1>Recent posts</h1>
+      </header>
+      
+      <article class="mini-post">
+        <section>
+          
+
+        </section>
+        <header>
+          <h1><a href="/posts/rsync/">The easy way to synchronize your data.</a></h1>
+          <time class="published" datetime="">June 30, 2024</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+        <section>
+          
+
+        </section>
+        <header>
+          <h1><a href="/posts/monty-hall/">The Monty Hall problem... Should I stay or should I change?</a></h1>
+          <time class="published" datetime="">February 24, 2024</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+        <section>
+          
+
+        </section>
+        <header>
+          <h1><a href="/posts/ecg-anomaly-detection/">Time-series anomaly detection with autoencoder</a></h1>
+          <time class="published" datetime="">July 23, 2023</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+        <section>
+          
+
+        </section>
+        <header>
+          <h1><a href="/posts/emacs/remote-command-ssh/">Run a command on a remote server with Emacs.</a></h1>
+          <time class="published" datetime="">December 22, 2022</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+        <section>
+          
+
+        </section>
+        <header>
+          <h1><a href="/posts/python-statements/">These Python keywords will simplify your code</a></h1>
+          <time class="published" datetime="">October 16, 2022</time>
+        </header>
+      </article>
+      
+      
+        <a href="/posts/" class="button">See more</a>
+      
+    </section>
+  
+
+  
+    
+      <section id="categories">
+        <header>
+          <h1><a href="/categories">Categories</a></h1>
+        </header>
+        <ul>
+          
+            
+          
+          
+          <li>
+            
+              <a href="/categories/machine-learning/">machine-learning<span class="count">10</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/programming/">programming<span class="count">7</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/linux/">linux<span class="count">4</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/natural-language-processing/">natural-language-processing<span class="count">3</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/python/">python<span class="count">3</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/emacs/">emacs<span class="count">2</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/japanese/">japanese<span class="count">2</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/security/">security<span class="count">2</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/web/">web<span class="count">2</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/computer/">computer<span class="count">1</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/linguistic/">linguistic<span class="count">1</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/random/">random<span class="count">1</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/statistics/">statistics<span class="count">1</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/tools/">tools<span class="count">1</span></a>
+            
+          
+          </li>
+        </ul>
+      </section>
+    
+  
+
+  
+    <section id="mini-bio">
+      <header>
+        <h1>About</h1>
+      </header>
+      <p>This website is a weblog were I write about computer science, machine learning, language learning.</p>
+      <footer>
+        <a href="/about" class="button">Learn More</a>
+      </footer>
+    </section>
+  
+</section>
+
+      <footer id="site-footer">
+  
+      <ul class="socnet-icons">
+        
+
+        <li><a href="//github.com/adamoudad" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+
+<li><a href="//stackoverflow.com/users/7013114/adam-oudad" target="_blank" rel="noopener" title="Stack Overflow" class="fab fa-stack-overflow"></a></li>
+
+
+
+
+
+
+
+
+<li><a href="//medium.com/@adam.oudad" target="_blank" rel="noopener" title="Medium" class="fab fa-medium"></a></li>
+<li><a href="//linkedin.com/in/adamoudad" target="_blank" rel="noopener" title="LinkedIn" class="fab fa-linkedin"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//twitter.com/OudadAdam" target="_blank" rel="noopener" title="Twitter" class="fab fa-twitter"></a></li>
+
+
+
+
+
+
+
+<li><a href="//researchgate.net/profile/Adam_Oudad" target="_blank" rel="noopener" title="Research Gate"><i class="ai ai-researchgate"></i></a></li>
+
+
+
+
+
+      </ul>
+  
+  <p class="copyright">
+    
+      &copy; 2024
+      
+        (Machine) Learning log.
+      
+    . <br>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.99.1' target='_blank' rel='noopener'>Hugo</a>
+  </p>
+</footer>
+<a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.css" integrity="sha384-D+9gmBxUQogRLqvARvNLmA9hS2x//eK1FhVb9PiU86gmcrBrJAQT8okdJ4LMp2uv" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.js" integrity="sha384-483A6DwYfKeDa0Q52fJmxFXkcPCFfnXMoXblOkJ4JcA8zATN6Tm78UNL72AKk+0O" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/contrib/auto-render.min.js" integrity="sha384-yACMu8JWxKzSp/C1YV86pzGiQ/l1YUfE8oPuahJQxzehAjEt2GiQuy/BIvl9KyeF" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+
+      <script src="/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script><script src="/js/bundle.min.d0b3e0b5f2cfc7467ead7d316ecb9dea4d29ef3c23ad300df9d7017ff98b2331.js" integrity="sha256-0LPgtfLPx0Z&#43;rX0xbsud6k0p7zwjrTAN&#43;dcBf/mLIzE="></script>
+    <script src="/js/add-on.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZKMEYDZ08Y"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-ZKMEYDZ08Y', { 'anonymize_ip': false });
+}
+</script>
+
+    </div>
+  </body>
+</html>

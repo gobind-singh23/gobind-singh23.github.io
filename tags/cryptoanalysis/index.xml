@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>cryptoanalysis on Adam Oudad</title>
+    <link>https://adamoudad.github.io/tags/cryptoanalysis/</link>
+    <description>Recent content in cryptoanalysis on Adam Oudad</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 31 Mar 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://adamoudad.github.io/tags/cryptoanalysis/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Generative Adversarial Networks can crack your password!</title>
+      <link>https://adamoudad.github.io/posts/passgan/</link>
+      <pubDate>Tue, 31 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://adamoudad.github.io/posts/passgan/</guid>
+      <description>I stumbled upon an article using neural networks that guess passwords. It shows an original application of Generative Adversarial Networks (GAN). What are GAN?   Generative Adversarial Networks are three words that have been used a lot during the past few years in Artificial Intelligence research. It refers to neural networks that have been trained in the adversarial framework. A neural network is a function with many parameters that can be optimized from assessing the errors the network makes from the expected output, or ground-truth.</description>
+    </item>
+    
+  </channel>
+</rss>

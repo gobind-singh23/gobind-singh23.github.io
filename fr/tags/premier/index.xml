@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>premier on (Machine) Learning log.</title>
+    <link>https://adamoudad.github.io/fr/tags/premier/</link>
+    <description>Recent content in premier on (Machine) Learning log.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr</language>
+    <lastBuildDate>Mon, 05 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://adamoudad.github.io/fr/tags/premier/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Premier article</title>
+      <link>https://adamoudad.github.io/fr/posts/premier-article/</link>
+      <pubDate>Mon, 05 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://adamoudad.github.io/fr/posts/premier-article/</guid>
+      <description>Premier article en Français, la suite arrive !</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>anomaly-detection on (Machine) Learning log.</title>
+    <link>https://adamoudad.github.io/tags/anomaly-detection/</link>
+    <description>Recent content in anomaly-detection on (Machine) Learning log.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 23 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://adamoudad.github.io/tags/anomaly-detection/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Time-series anomaly detection with autoencoder</title>
+      <link>https://adamoudad.github.io/posts/ecg-anomaly-detection/</link>
+      <pubDate>Sun, 23 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://adamoudad.github.io/posts/ecg-anomaly-detection/</guid>
+      <description>One powerful use case, yet often overlooked, of the autoencoders is anomaly detection.
+ In this tutorial, I will show how to use autoencoders to detect abnormal electrocardiograms (ECG).
+ I will divide the tutorial in two parts. The first one, here will guide you throught the problem formulation and how to train the autoencoder neural network over the ECG data.
+ I will release the next part in a week or two, so please subscribe to have the update!</description>
+    </item>
+    
+  </channel>
+</rss>

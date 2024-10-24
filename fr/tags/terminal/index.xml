@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>terminal on (Machine) Learning log.</title>
+    <link>https://adamoudad.github.io/fr/tags/terminal/</link>
+    <description>Recent content in terminal on (Machine) Learning log.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr</language>
+    <lastBuildDate>Mon, 03 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://adamoudad.github.io/fr/tags/terminal/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Se connecter à un autre ordinateur avec tmate</title>
+      <link>https://adamoudad.github.io/fr/posts/connexion-tmate/</link>
+      <pubDate>Mon, 03 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://adamoudad.github.io/fr/posts/connexion-tmate/</guid>
+      <description>Il y a une façon très simple d&amp;#39;accéder à un autre ordinateur via le terminal, et c&amp;#39;est avec le programme tmate.
+ J&amp;#39;explique ça ici très simplement.
+D&amp;#39;abord, installer tmate.  Ouvrir un terminal et,
+  Pour Ubuntu  sudo apt-get install tmate  Pour Archlinux  pacman -S tmate  Pour NixOS  nix-env -iA nixos.tmate    Lancer la commande tmate dans un terminal.  Elle produira le message d&amp;#39;introduction suivant.</description>
+    </item>
+    
+  </channel>
+</rss>

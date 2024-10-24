@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on (Machine) Learning log.</title>
+    <link>https://adamoudad.github.io/fr/tags/</link>
+    <description>Recent content in Tags on (Machine) Learning log.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr</language>
+    <lastBuildDate>Mon, 03 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://adamoudad.github.io/fr/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>outil</title>
+      <link>https://adamoudad.github.io/fr/tags/outil/</link>
+      <pubDate>Mon, 03 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://adamoudad.github.io/fr/tags/outil/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>terminal</title>
+      <link>https://adamoudad.github.io/fr/tags/terminal/</link>
+      <pubDate>Mon, 03 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://adamoudad.github.io/fr/tags/terminal/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>anki</title>
+      <link>https://adamoudad.github.io/fr/tags/anki/</link>
+      <pubDate>Tue, 26 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://adamoudad.github.io/fr/tags/anki/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>latex</title>
+      <link>https://adamoudad.github.io/fr/tags/latex/</link>
+      <pubDate>Tue, 26 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://adamoudad.github.io/fr/tags/latex/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

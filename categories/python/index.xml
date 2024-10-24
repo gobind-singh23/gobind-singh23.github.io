@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on (Machine) Learning log.</title>
+    <link>https://adamoudad.github.io/categories/python/</link>
+    <description>Recent content in Python on (Machine) Learning log.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 16 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://adamoudad.github.io/categories/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>These Python keywords will simplify your code</title>
+      <link>https://adamoudad.github.io/posts/python-statements/</link>
+      <pubDate>Sun, 16 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://adamoudad.github.io/posts/python-statements/</guid>
+      <description>Python embeds very nifty keywords and writing shorthands to help us in the writing of code that is short and easy to read. In the following, I will review some which are often overlooked.
+Control the flow of execution, and filter data on the fly  You may have to work with raw data, with unpredictable structure. Loading or processing such data will likely raise many errors. Here is a way to ignore some minor inconsistencies and at least run your script for, say, a proof of concept.</description>
+    </item>
+    
+    <item>
+      <title>How many patterns are there to lock your android smartphone?</title>
+      <link>https://adamoudad.github.io/posts/lock_pattern/</link>
+      <pubDate>Sat, 16 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://adamoudad.github.io/posts/lock_pattern/</guid>
+      <description>If you own an Android smartphone, you are familiar with that pattern you chose to lock your phone with. Every time, you pick your phone and mechanically draw these lines on your screen, connecting the dots to form the unlock pattern.
+  Android lockscreen.
+   This lock mechanism is more intuitive than using a sequence of numbers (such as PIN), but has its drawbacks, as research papers show how you can efficiently guess the unlock pattern from</description>
+    </item>
+    
+    <item>
+      <title>Training models with a progress bar</title>
+      <link>https://adamoudad.github.io/posts/progress_bar_with_tqdm/</link>
+      <pubDate>Mon, 12 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://adamoudad.github.io/posts/progress_bar_with_tqdm/</guid>
+      <description>tqdm 1is a Python library for adding progress bar. It lets you configure and display a progress bar with metrics you want to track. Its ease of use and versatility makes it the perfect choice for tracking machine learning experiments.
+ I organize this tutorial in two parts. I will first introduce tqdm, then show an example for machine learning. For each code fragment in this article, we will import the sleep function from Python&amp;#39;s time library as it will let us slow down the program to see the progress bar update.</description>
+    </item>
+    
+  </channel>
+</rss>

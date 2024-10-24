@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tools on (Machine) Learning log.</title>
+    <link>https://adamoudad.github.io/categories/tools/</link>
+    <description>Recent content in tools on (Machine) Learning log.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 15 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://adamoudad.github.io/categories/tools/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Keynote presentation on Linux</title>
+      <link>https://adamoudad.github.io/posts/pdfpc/</link>
+      <pubDate>Sat, 15 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://adamoudad.github.io/posts/pdfpc/</guid>
+      <description>A great presentation software is a precious tool, even so when working remotely. If you are on MacOS, you will likely want to use Keynote, which has great features such as displaying a presenter view on one screen with a timer while displaying the presentation on another screen. On Linux, however, most PDF readers, like evince if you are using GNOME, have quite limited features for presenting.
+ Recently I found about pdfpc, a great tool to do presentations with a PDF document, on Linux.</description>
+    </item>
+    
+  </channel>
+</rss>

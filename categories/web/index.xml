@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Web on (Machine) Learning log.</title>
+    <link>https://adamoudad.github.io/categories/web/</link>
+    <description>Recent content in Web on (Machine) Learning log.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 21 May 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://adamoudad.github.io/categories/web/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Have a bot haunt your Slack workspace</title>
+      <link>https://adamoudad.github.io/posts/python-slack-bot/</link>
+      <pubDate>Thu, 21 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://adamoudad.github.io/posts/python-slack-bot/</guid>
+      <description>In this article we&amp;#39;ll see how to code your simple bot for Slack, and schedule it to run regularily. As some testing might be necessary, I recommend to create a dummy Slack workspace for this tutorial.
+Add a webhook for your Slack workspace  We first need to configure a web hook to communicate to our Slack workspace. Go to this url, choose your channel and click on add a webhook.</description>
+    </item>
+    
+    <item>
+      <title>Hugo and Katex</title>
+      <link>https://adamoudad.github.io/posts/hugo-katex/</link>
+      <pubDate>Mon, 20 May 2019 03:49:04 +0900</pubDate>
+      
+      <guid>https://adamoudad.github.io/posts/hugo-katex/</guid>
+      <description>I followed this good tutorial on how to add \(\KaTeX\) to hugo.
+ Here is an example showing that KaTeX (should) now work. $$\int_{a}^{b} x^2 dx$$
+ Here are some remarks I have about the original tutorial.
+Auto-rendering  Add the following script in the footer
+&amp;lt;script defer src=&amp;#34;https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/contrib/auto-render.min.js&amp;#34; integrity=&amp;#34;sha384-yACMu8JWxKzSp/C1YV86pzGiQ/l1YUfE8oPuahJQxzehAjEt2GiQuy/BIvl9KyeF&amp;#34; crossorigin=&amp;#34;anonymous&amp;#34; onload=&amp;#34;renderMathInElement(document.body);&amp;#34;&amp;gt;&amp;lt;/script&amp;gt;  This will activate the auto rendering
+  Other remarks    {{ end }} is unnecessary, only write the following to include the katex.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>machine-learning on (Machine) Learning log.</title>
+    <link>https://adamoudad.github.io/tags/machine-learning/</link>
+    <description>Recent content in machine-learning on (Machine) Learning log.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 23 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://adamoudad.github.io/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Time-series anomaly detection with autoencoder</title>
+      <link>https://adamoudad.github.io/posts/ecg-anomaly-detection/</link>
+      <pubDate>Sun, 23 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://adamoudad.github.io/posts/ecg-anomaly-detection/</guid>
+      <description>One powerful use case, yet often overlooked, of the autoencoders is anomaly detection.
+ In this tutorial, I will show how to use autoencoders to detect abnormal electrocardiograms (ECG).
+ I will divide the tutorial in two parts. The first one, here will guide you throught the problem formulation and how to train the autoencoder neural network over the ECG data.
+ I will release the next part in a week or two, so please subscribe to have the update!</description>
+    </item>
+    
+    <item>
+      <title>Comparing Keras and PyTorch on sentiment classification</title>
+      <link>https://adamoudad.github.io/posts/keras_torch_comparison/sentiment_classification/</link>
+      <pubDate>Sat, 20 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://adamoudad.github.io/posts/keras_torch_comparison/sentiment_classification/</guid>
+      <description>After part one which covered an overview of Keras and PyTorch syntaxes, this is part two of how to switch between Keras and PyTorch. We will implement a neural network to classify movie reviews by sentiment.
+ Keras is aimed at fast prototyping. It is designed to write less code, letting the developper focus on other tasks such as data preparation, processing, cleaning, etc PyTorch is aimed at modularity and versatility.</description>
+    </item>
+    
+    <item>
+      <title>Comparison of Keras and PyTorch syntaxes</title>
+      <link>https://adamoudad.github.io/posts/keras_torch_comparison/syntax/</link>
+      <pubDate>Tue, 02 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://adamoudad.github.io/posts/keras_torch_comparison/syntax/</guid>
+      <description>Keras and PyTorch are popular frameworks for building programs with deep learning. The former, Keras, is more precisely an abstraction layer for Tensorflow and offers the capability to prototype models fast. There are similar abstraction layers developped on top of PyTorch, such as PyTorch Ignite or PyTorch lightning. They are not yet as mature as Keras, but are worth the try!
+ I found few resources or articles comparing codes in both Keras and PyTorch and I will show such example in this article, to help understand the key differences in terms of syntax and naming between frameworks.</description>
+    </item>
+    
+    <item>
+      <title>Ask this bot to solve your dilemmas</title>
+      <link>https://adamoudad.github.io/posts/pierre-corneille-bot/</link>
+      <pubDate>Wed, 18 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://adamoudad.github.io/posts/pierre-corneille-bot/</guid>
+      <description>Life is full of dilemma and tough choices for our greatest enjoyment. Well, some might be annoying to resolve. So I present to you the contribution from machine learning in the direction of relieving ourselves the burden of having to make choices in our lives.
+ You probably have played a popular game named &amp;#34;Would you rather&amp;#34; in which two options are considered and only one should be chosen. It can be between two equally unwanted things: would you rather &amp;#34;lose the ability to feel emotions&amp;#34; or &amp;#34;be physically paralyzed&amp;#34;.</description>
+    </item>
+    
+    <item>
+      <title>Training models with a progress bar</title>
+      <link>https://adamoudad.github.io/posts/progress_bar_with_tqdm/</link>
+      <pubDate>Mon, 12 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://adamoudad.github.io/posts/progress_bar_with_tqdm/</guid>
+      <description>tqdm 1is a Python library for adding progress bar. It lets you configure and display a progress bar with metrics you want to track. Its ease of use and versatility makes it the perfect choice for tracking machine learning experiments.
+ I organize this tutorial in two parts. I will first introduce tqdm, then show an example for machine learning. For each code fragment in this article, we will import the sleep function from Python&amp;#39;s time library as it will let us slow down the program to see the progress bar update.</description>
+    </item>
+    
+    <item>
+      <title>Data processing libraries in Python</title>
+      <link>https://adamoudad.github.io/posts/data-processing-libraries/</link>
+      <pubDate>Tue, 12 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://adamoudad.github.io/posts/data-processing-libraries/</guid>
+      <description>With most popular libraries and most of bleeding-edge technologies implemented, Python is usually recommended as a good choice for machine learning related projects. Yet it can be daunting when looking at all different libraries that exist, and difficult to choose a couple to get started.
+ Machine learning is founded on data processing, and performances of models will heavily depend on your ability to read and transform data in a suitable format for the task you wish to do.</description>
+    </item>
+    
+    <item>
+      <title>Generative Adversarial Networks can crack your password!</title>
+      <link>https://adamoudad.github.io/posts/passgan/</link>
+      <pubDate>Tue, 31 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://adamoudad.github.io/posts/passgan/</guid>
+      <description>I stumbled upon an article using neural networks that guess passwords. It shows an original application of Generative Adversarial Networks (GAN).
+What are GAN?  Generative Adversarial Networks are three words that have been used a lot during the past few years in Artificial Intelligence research. It refers to neural networks that have been trained in the adversarial framework. A neural network is a function with many parameters that can be optimized from assessing the errors the network makes from the expected output, or ground-truth.</description>
+    </item>
+    
+    <item>
+      <title>A guided tour of classification metrics</title>
+      <link>https://adamoudad.github.io/posts/classification-metrics/</link>
+      <pubDate>Wed, 25 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://adamoudad.github.io/posts/classification-metrics/</guid>
+      <description>Accuracy, precision, recall, and F1-score are metrics used to assess automatic classifiers. These metrics are calculated from a confusion matrix. Say we have spam filter which tells whether a mail is spam or not. With a test dataset of 100 spam emails and 900 non-spam, we get the following results.
+    Actual class: Spam Actual class: Non-spam     Prediction class: Spam 85 100   Prediction class: Non-spam 15 800     This confusion matrix shows the confusions the system makes in its predictions.</description>
+    </item>
+    
+    <item>
+      <title>List of datasets</title>
+      <link>https://adamoudad.github.io/posts/datasets/</link>
+      <pubDate>Wed, 30 Oct 2019 03:49:04 +0900</pubDate>
+      
+      <guid>https://adamoudad.github.io/posts/datasets/</guid>
+      <description>Machine Learning requires data. To obtain some, one way is to scrape or retrieve data directly from somewhere. Another way is to reuse datasets freely available over the internet, specially made for most common tasks. Because it has become so frequent for data scientists to take much time searching and processing data, Google has its own Dataset search tool. There are also big lists of datasets for research purpose, such as this one.</description>
+    </item>
+    
+  </channel>
+</rss>

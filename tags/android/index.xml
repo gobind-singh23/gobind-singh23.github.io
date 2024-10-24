@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>android on (Machine) Learning log.</title>
+    <link>https://adamoudad.github.io/tags/android/</link>
+    <description>Recent content in android on (Machine) Learning log.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 16 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://adamoudad.github.io/tags/android/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How many patterns are there to lock your android smartphone?</title>
+      <link>https://adamoudad.github.io/posts/lock_pattern/</link>
+      <pubDate>Sat, 16 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://adamoudad.github.io/posts/lock_pattern/</guid>
+      <description>If you own an Android smartphone, you are familiar with that pattern you chose to lock your phone with. Every time, you pick your phone and mechanically draw these lines on your screen, connecting the dots to form the unlock pattern.
+  Android lockscreen.
+   This lock mechanism is more intuitive than using a sequence of numbers (such as PIN), but has its drawbacks, as research papers show how you can efficiently guess the unlock pattern from</description>
+    </item>
+    
+  </channel>
+</rss>

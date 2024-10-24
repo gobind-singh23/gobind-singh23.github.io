@@ -1,0 +1,769 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+<title>Training models with a progress bar - (Machine) Learning log.</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="monetization" content="$ilp.uphold.com/iN8Xkq2iHNHB">
+
+
+<meta name="generator" content="Hugo 0.99.1" /><meta itemprop="name" content="Training models with a progress bar">
+<meta itemprop="description" content="tqdm 1is a Python library for adding progress bar. It lets you configure and display a progress bar with metrics you want to track. Its ease of use and versatility makes it the perfect choice for tracking machine learning experiments.
+ I organize this tutorial in two parts. I will first introduce tqdm, then show an example for machine learning. For each code fragment in this article, we will import the sleep function from Python&#39;s time library as it will let us slow down the program to see the progress bar update."><meta itemprop="datePublished" content="2020-10-12T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2020-10-12T00:00:00+00:00" />
+<meta itemprop="wordCount" content="875">
+<meta itemprop="keywords" content="machine-learning,python," /><meta property="og:title" content="Training models with a progress bar" />
+<meta property="og:description" content="tqdm 1is a Python library for adding progress bar. It lets you configure and display a progress bar with metrics you want to track. Its ease of use and versatility makes it the perfect choice for tracking machine learning experiments.
+ I organize this tutorial in two parts. I will first introduce tqdm, then show an example for machine learning. For each code fragment in this article, we will import the sleep function from Python&#39;s time library as it will let us slow down the program to see the progress bar update." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://adamoudad.github.io/posts/progress_bar_with_tqdm/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-10-12T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-10-12T00:00:00+00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Training models with a progress bar"/>
+<meta name="twitter:description" content="tqdm 1is a Python library for adding progress bar. It lets you configure and display a progress bar with metrics you want to track. Its ease of use and versatility makes it the perfect choice for tracking machine learning experiments.
+ I organize this tutorial in two parts. I will first introduce tqdm, then show an example for machine learning. For each code fragment in this article, we will import the sleep function from Python&#39;s time library as it will let us slow down the program to see the progress bar update."/>
+<meta name="twitter:site" content="@OudadAdam"/>
+<link rel="stylesheet" href="/css/bundle.min.262e62e9c1615dd1ac95d339cfc4ca2167aee72b71d853838920a22e7088b06b.css" integrity="sha256-Ji5i6cFhXdGsldM5z8TKIWeu5ytx2FODiSCiLnCIsGs=">
+        <link rel="stylesheet" href="/css/add-on.css">
+</head>
+
+  <body>
+    
+<header id="site-header">
+  <nav id="site-nav">
+    <h1 class="nav-title">
+      <a href="/">
+        
+          
+            posts
+          
+        
+      </a>
+    </h1>
+    <menu id="site-nav-menu" class="flyout-menu">
+      
+        
+          
+          
+            <a href="/" class="link"><i class='fa fa-home'></i> Home</a>
+          
+        
+      
+        
+          
+          
+            <a href="/about/" class="link"><i class='far fa-id-card'></i> About</a>
+          
+        
+      
+        
+          
+          
+            <a href="/posts/" class="link"><i class='far fa-newspaper'></i> Posts</a>
+          
+        
+      
+        
+          
+          
+            <a href="/categories/" class="link"><i class='fas fa-sitemap'></i> Categories</a>
+          
+        
+      
+      <a href="#share-menu" class="share-toggle"><i class="fas fa-share-alt">&nbsp;</i>Share</a>
+      
+
+    </menu>
+    
+
+    <a href="#share-menu" class="share-toggle"><i class="fas fa-share-alt fa-2x">&nbsp;</i></a>
+    <a href="#lang-menu" class="lang-toggle" lang="en">en</a>
+    <a href="#site-nav" class="nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
+  </nav>
+  <menu id="lang-menu" class="flyout-menu">
+  <a href="#" lang="en" class="link active">English (en)</a>
+  
+    
+      
+    
+      
+        <a href="/fr" lang="fr" class="no-lang link">Français (fr)</a>
+      
+    
+  
+</menu>
+
+  
+    <menu id="share-menu" class="flyout-menu">
+      <h1>Share Post</h1>
+      
+
+
+
+
+  
+    
+    <a href="//twitter.com/share?text=Training%20models%20with%20a%20progress%20bar&amp;url=https%3a%2f%2fadamoudad.github.io%2fposts%2fprogress_bar_with_tqdm%2f" target="_blank" rel="noopener" class="share-btn twitter">
+        <i class="fab fa-twitter"></i><p>&nbsp;Twitter</p>
+      </a>
+  
+
+  
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fadamoudad.github.io%2fposts%2fprogress_bar_with_tqdm%2f&amp;title=Training%20models%20with%20a%20progress%20bar" target="_blank" rel="noopener" class="share-btn linkedin">
+            <i class="fab fa-linkedin"></i><p>&nbsp;LinkedIn</p>
+          </a>
+  
+
+
+    </menu>
+  
+</header>
+
+    <div id="wrapper">
+      <section id="site-intro" >
+  <a href="/"><img src="/avatar.png" class="circle" width="150" alt="Adam Oudad" /></a>
+  <header>
+    <h1>Adam Oudad</h1>
+  </header>
+  <main>
+    <p>(Machine) Learning log.</p>
+  </main>
+  
+    <footer>
+      <ul class="socnet-icons">
+        
+
+        <li><a href="//github.com/adamoudad" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+
+<li><a href="//stackoverflow.com/users/7013114/adam-oudad" target="_blank" rel="noopener" title="Stack Overflow" class="fab fa-stack-overflow"></a></li>
+
+
+
+
+
+
+
+
+<li><a href="//medium.com/@adam.oudad" target="_blank" rel="noopener" title="Medium" class="fab fa-medium"></a></li>
+<li><a href="//linkedin.com/in/adamoudad" target="_blank" rel="noopener" title="LinkedIn" class="fab fa-linkedin"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//twitter.com/OudadAdam" target="_blank" rel="noopener" title="Twitter" class="fab fa-twitter"></a></li>
+
+
+
+
+
+
+
+<li><a href="//researchgate.net/profile/Adam_Oudad" target="_blank" rel="noopener" title="Research Gate"><i class="ai ai-researchgate"></i></a></li>
+
+
+
+
+
+      </ul>
+    </footer>
+  
+</section>
+
+      <main id="site-main">
+        <article class="post">
+  <header>
+  <div class="title">
+    
+        <h2><a href="/posts/progress_bar_with_tqdm/">Training models with a progress bar</a></h2>
+    
+    
+</div>
+  <div class="meta">
+    <time class="published" datetime="2020-10-12 00:00:00 &#43;0000 UTC">
+      October 12, 2020
+    </time>
+    <span class="author"></span>
+    
+      <p>5 minutes read</p>
+    
+  </div>
+</header>
+
+  <section id="socnet-share">
+    
+
+
+
+
+  
+    
+    <a href="//twitter.com/share?text=Training%20models%20with%20a%20progress%20bar&amp;url=https%3a%2f%2fadamoudad.github.io%2fposts%2fprogress_bar_with_tqdm%2f" target="_blank" rel="noopener" class="share-btn twitter">
+        <i class="fab fa-twitter"></i><p>&nbsp;Twitter</p>
+      </a>
+  
+
+  
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fadamoudad.github.io%2fposts%2fprogress_bar_with_tqdm%2f&amp;title=Training%20models%20with%20a%20progress%20bar" target="_blank" rel="noopener" class="share-btn linkedin">
+            <i class="fab fa-linkedin"></i><p>&nbsp;LinkedIn</p>
+          </a>
+  
+
+
+  </section>
+  
+
+  <div class="content">
+    
+<p><code>tqdm</code> <sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup>is a Python library for adding progress bar. It lets you configure and display a progress bar with metrics you want to track. Its ease of use and versatility makes it the perfect choice for tracking machine learning experiments.</p>
+<p>
+I organize this tutorial in two parts. I will first introduce tqdm, then show an example for machine learning. For each code fragment in this article, we will import the <code>sleep</code> function from Python&#39;s <code>time</code> library as it will let us slow down the program to see the progress bar update.</p>
+<div class="src src-python">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> time <span style="color:#f92672">import</span> sleep</span></span></code></pre></div>
+</div>
+<div id="outline-container-headline-1" class="outline-3">
+<h3 id="headline-1">
+Tqdm
+</h3>
+<div id="outline-text-headline-1" class="outline-text-3">
+<p>You can install tqdm with <code>pip install tqdm</code>. The library comes with various iterators each dedicated to a specific use that I am going to present.</p>
+<p>
+   <code>tqdm</code> is the default iterator. It takes an iterator object as argument and displays a progress bar as it iterates over it.</p>
+<div class="src src-python">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> tqdm <span style="color:#f92672">import</span> tqdm
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>lst <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">11</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> element <span style="color:#f92672">in</span> tqdm(lst):
+</span></span><span style="display:flex;"><span>sleep(<span style="color:#ae81ff">0.1</span>)</span></span></code></pre></div>
+</div>
+<p>Output is</p>
+<pre class="example">
+100%|█████████████████████████████████| 5/5 [00:00&lt;00:00,  9.90it/s]
+</pre>
+<p>You can see the nice output with <code class="verbatim">9.90it/s</code> meaning an average speed of 9.90 iterations per second. &#34;it&#34; for iterations can be configured to something else and this is what we will see on the next example.</p>
+<p>
+   <code>trange</code> follows the same template as <code>range</code> in Python. For example, give to <code>trange</code> the number of iterations.</p>
+<div class="src src-python">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> tqdm <span style="color:#f92672">import</span> trange
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>iterations <span style="color:#f92672">=</span> <span style="color:#ae81ff">20</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> trange(iterations, desc<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Proving P=NP&#34;</span>, unit<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;carrots&#34;</span>):
+</span></span><span style="display:flex;"><span>sleep(<span style="color:#ae81ff">0.1</span>)</span></span></code></pre></div>
+</div>
+<pre class="example">
+Proving P=NP: 100%|████████████| 20/20 [00:02&lt;00:00,  9.91carrots/s]
+</pre>
+<p>You can see in this example we added a (joke) description of what we are doing and the unit for each iteration.</p>
+</div>
+</div>
+<div id="outline-container-headline-2" class="outline-3">
+<h3 id="headline-2">
+Update the progress bar during execution
+</h3>
+<div id="outline-text-headline-2" class="outline-text-3">
+<p><code>tqdm</code> has two methods that can update what is displayed in the progress bar.</p>
+<ul>
+<li><code>.set_description</code>, is used to update the text prepended in front of the progress bar (the prefix).</li>
+<li><code>.set_postfix</code> is used to update the text appended after the progress bar (the postfix).</li>
+</ul>
+<p>
+   To use these methods, we need to assign the <code>tqdm</code> iterator instance to a variable. This can be done either with the <code>=</code> operator or the <code>with</code> keyword in Python.</p>
+<p>
+   We can for example update the postfix with the list of divisors of the number <code>i</code>. Let&#39;s use this function to get the list of divisors</p>
+<div class="src src-python">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_divisors</span>(n):
+</span></span><span style="display:flex;"><span> divisors <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">for</span> m <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, n):
+</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">if</span> n <span style="color:#f92672">%</span> m <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+</span></span><span style="display:flex;"><span>         divisors<span style="color:#f92672">.</span>append(m)
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">return</span> divisors</span></span></code></pre></div>
+</div>
+<p>And here is our code with progress bar.</p>
+<div class="src src-python">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>iterations <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span>pbar <span style="color:#f92672">=</span> trange(iterations, desc<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Proving P=NP&#34;</span>, unit<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;carrots&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> pbar:
+</span></span><span style="display:flex;"><span> sleep(<span style="color:#ae81ff">0.5</span>)
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">if</span> i <span style="color:#f92672">%</span> <span style="color:#ae81ff">2</span>:
+</span></span><span style="display:flex;"><span>     pbar<span style="color:#f92672">.</span>set_description(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Testing odd number </span><span style="color:#e6db74">{</span>i<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>     pbar<span style="color:#f92672">.</span>set_description(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Testing even number </span><span style="color:#e6db74">{</span>i<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span> pbar<span style="color:#f92672">.</span>set_postfix(divisors<span style="color:#f92672">=</span>get_divisors(i))</span></span></code></pre></div>
+</div>
+<p>If you feel like a distinguished Python programmer, you may use <code>with</code> keyword like so</p>
+<div class="src src-python">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>iterations <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">with</span> trange(iterations,
+</span></span><span style="display:flex;"><span>         desc<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Proving P=NP&#34;</span>, unit<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;carrots&#34;</span>) <span style="color:#66d9ef">as</span> pbar:
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> pbar:
+</span></span><span style="display:flex;"><span>     sleep(<span style="color:#ae81ff">0.5</span>)
+</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">if</span> i <span style="color:#f92672">%</span> <span style="color:#ae81ff">2</span>:
+</span></span><span style="display:flex;"><span>         pbar<span style="color:#f92672">.</span>set_description(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Testing odd number </span><span style="color:#e6db74">{</span>i<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>         pbar<span style="color:#f92672">.</span>set_description(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Testing even number </span><span style="color:#e6db74">{</span>i<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>     pbar<span style="color:#f92672">.</span>set_postfix(divisors<span style="color:#f92672">=</span>get_divisors(i))</span></span></code></pre></div>
+</div>
+<p>Here is the status displayed at <code>i=6</code>.</p>
+<pre class="example">
+Testing even number 6:  70%|██████████████▋      | 7/10 [00:03&lt;00:01,  1.76carrots/s, divisors=[1, 2, 3]]
+</pre>
+</div>
+</div>
+<div id="outline-container-headline-3" class="outline-3">
+<h3 id="headline-3">
+Track loss and accuracy
+</h3>
+<div id="outline-text-headline-3" class="outline-text-3">
+<p>In this section, we use a neural network wrote in PyTorch and train it using <code>tqdm</code> to display the loss and accuracy.
+   Here is the model</p>
+<div class="src src-python">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> torch
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> torch <span style="color:#f92672">import</span> nn
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> torch.nn.functional <span style="color:#66d9ef">as</span> F
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Perceptron</span>(nn<span style="color:#f92672">.</span>Module):
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">def</span> __init__(self):
+</span></span><span style="display:flex;"><span>     super()<span style="color:#f92672">.</span>__init__()
+</span></span><span style="display:flex;"><span>     self<span style="color:#f92672">.</span>dropout2 <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>Dropout(<span style="color:#ae81ff">0.5</span>)
+</span></span><span style="display:flex;"><span>     self<span style="color:#f92672">.</span>fc1 <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>Linear(<span style="color:#ae81ff">28</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">28</span>, <span style="color:#ae81ff">128</span>)  <span style="color:#75715e"># 9216</span>
+</span></span><span style="display:flex;"><span>     self<span style="color:#f92672">.</span>fc2 <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>Linear(<span style="color:#ae81ff">128</span>, <span style="color:#ae81ff">10</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">forward</span>(self, x):
+</span></span><span style="display:flex;"><span>     x <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>flatten(x, <span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>     x <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>fc1(x)
+</span></span><span style="display:flex;"><span>     x <span style="color:#f92672">=</span> F<span style="color:#f92672">.</span>relu(x)
+</span></span><span style="display:flex;"><span>     x <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>dropout2(x)
+</span></span><span style="display:flex;"><span>     x <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>fc2(x)
+</span></span><span style="display:flex;"><span>     output <span style="color:#f92672">=</span> F<span style="color:#f92672">.</span>log_softmax(x, dim<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">return</span> output</span></span></code></pre></div>
+</div>
+<p>This is a simple perceptron model that we can use for processing images of digits from MNIST dataset. The following code for loading MNIST dataset is inspired from a PyTorch example<sup class="footnote-reference"><a id="footnote-reference-2" href="#footnote-2">2</a></sup>.</p>
+<div class="src src-python">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> torchvision <span style="color:#f92672">import</span> datasets, transforms
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> torch.utils.data <span style="color:#f92672">import</span> DataLoader
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> torch.optim <span style="color:#f92672">import</span> Adam
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> torch <span style="color:#f92672">import</span> nn
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>transform<span style="color:#f92672">=</span>transforms<span style="color:#f92672">.</span>Compose([
+</span></span><span style="display:flex;"><span> transforms<span style="color:#f92672">.</span>ToTensor(),
+</span></span><span style="display:flex;"><span> transforms<span style="color:#f92672">.</span>Normalize((<span style="color:#ae81ff">0.1307</span>,), (<span style="color:#ae81ff">0.3081</span>,))
+</span></span><span style="display:flex;"><span>])
+</span></span><span style="display:flex;"><span>dataset <span style="color:#f92672">=</span> datasets<span style="color:#f92672">.</span>MNIST(<span style="color:#e6db74">&#39;./mnist_data&#39;</span>, train<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>, download<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>,
+</span></span><span style="display:flex;"><span>                      transform<span style="color:#f92672">=</span>transform)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>device <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>device(<span style="color:#e6db74">&#34;cuda&#34;</span> <span style="color:#66d9ef">if</span> torch<span style="color:#f92672">.</span>cuda<span style="color:#f92672">.</span>is_available() <span style="color:#66d9ef">else</span> <span style="color:#e6db74">&#34;cpu&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>model <span style="color:#f92672">=</span> Perceptron()<span style="color:#f92672">.</span>to(device)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>optimizer <span style="color:#f92672">=</span> Adam(model<span style="color:#f92672">.</span>parameters())
+</span></span><span style="display:flex;"><span>criterion <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>CrossEntropyLoss()
+</span></span><span style="display:flex;"><span>batch_size <span style="color:#f92672">=</span> <span style="color:#ae81ff">64</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>train_loader <span style="color:#f92672">=</span> DataLoader(dataset,
+</span></span><span style="display:flex;"><span>                       batch_size<span style="color:#f92672">=</span>batch_size,
+</span></span><span style="display:flex;"><span>                       num_workers<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>,
+</span></span><span style="display:flex;"><span>                       pin_memory<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>,
+</span></span><span style="display:flex;"><span>                       shuffle<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>,
+</span></span><span style="display:flex;"><span>                       drop_last<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)</span></span></code></pre></div>
+</div>
+<p>We just loaded our data, and defined our model and settings, we can now run a training experiment.</p>
+<div class="src src-python">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>model<span style="color:#f92672">.</span>train()
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> epoch <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">5</span>):
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">with</span> tqdm(train_loader, unit<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;batch&#34;</span>) <span style="color:#66d9ef">as</span> tepoch:
+</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">for</span> data, target <span style="color:#f92672">in</span> tepoch:
+</span></span><span style="display:flex;"><span>         tepoch<span style="color:#f92672">.</span>set_description(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Epoch </span><span style="color:#e6db74">{</span>epoch<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>         data, target <span style="color:#f92672">=</span> data<span style="color:#f92672">.</span>to(device), target<span style="color:#f92672">.</span>to(device)
+</span></span><span style="display:flex;"><span>         optimizer<span style="color:#f92672">.</span>zero_grad()
+</span></span><span style="display:flex;"><span>         output <span style="color:#f92672">=</span> model(data)
+</span></span><span style="display:flex;"><span>         predictions <span style="color:#f92672">=</span> output<span style="color:#f92672">.</span>argmax(dim<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>, keepdim<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)<span style="color:#f92672">.</span>squeeze()
+</span></span><span style="display:flex;"><span>         loss <span style="color:#f92672">=</span> F<span style="color:#f92672">.</span>nll_loss(output, target)
+</span></span><span style="display:flex;"><span>         correct <span style="color:#f92672">=</span> (predictions <span style="color:#f92672">==</span> target)<span style="color:#f92672">.</span>sum()<span style="color:#f92672">.</span>item()
+</span></span><span style="display:flex;"><span>         accuracy <span style="color:#f92672">=</span> correct <span style="color:#f92672">/</span> batch_size
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>         loss<span style="color:#f92672">.</span>backward()
+</span></span><span style="display:flex;"><span>         optimizer<span style="color:#f92672">.</span>step()
+</span></span><span style="display:flex;"><span>         
+</span></span><span style="display:flex;"><span>         tepoch<span style="color:#f92672">.</span>set_postfix(loss<span style="color:#f92672">=</span>loss<span style="color:#f92672">.</span>item(), accuracy<span style="color:#f92672">=</span><span style="color:#ae81ff">100.</span> <span style="color:#f92672">*</span> accuracy)
+</span></span><span style="display:flex;"><span>         sleep(<span style="color:#ae81ff">0.1</span>)</span></span></code></pre></div>
+</div>
+<p>I am once again using <code>sleep</code> function to pause the program so that we can see the update of the progress bar. As you can see, we just applied what we learned previously here, in particular with <code>tepoch.set_postfix</code> and <code>tepoch.set_description</code> which let you update the information displayed by the progress bar. Here is a capture of the output while the program was running</p>
+<pre class="example">
+Epoch 1:  15%|▉     | 142/937 [00:16&lt;01:32,  8.56batch/s, accuracy=89.1, loss=0.341]
+</pre>
+<p>This gives us an idea of how <code>tqdm</code> can be used in practical.</p>
+</div>
+</div>
+<div id="outline-container-headline-4" class="outline-3">
+<h3 id="headline-4">
+Conclusion
+</h3>
+<div id="outline-text-headline-4" class="outline-text-3">
+<p>You can achieve much more with <code>tqdm</code>, like adapting it to Jupyter notebooks, finely configuring the progress bar updates or nesting progress bars, so I recommend you to read the documentation for more: <a href="https://github.com/tqdm/tqdm">https://github.com/tqdm/tqdm</a></p>
+</div>
+</div>
+<div id="outline-container-headline-5" class="outline-2">
+<h2 id="headline-5">
+Footnotes
+</h2>
+</div>
+<div class="footnotes">
+<hr class="footnotes-separatator">
+<div class="footnote-definitions">
+<div class="footnote-definition">
+<sup id="footnote-1"><a href="#footnote-reference-1">1</a></sup>
+<div class="footnote-body">
+<p>&#34;tqdm&#34; means &#34;progress&#34; in arabic or is short for &#34;te quiero demasiado&#34; in spanish. You can pronounce it tek-a-dem if you prefer.</p>
+</div>
+</div>
+<div class="footnote-definition">
+<sup id="footnote-2"><a href="#footnote-reference-2">2</a></sup>
+<div class="footnote-body">
+<p><a href="https://github.com/pytorch/examples/blob/master/mnist/main.py">https://github.com/pytorch/examples/blob/master/mnist/main.py</a></p>
+</div>
+</div>
+</div>
+</div>
+
+  </div>
+  <footer>
+    <ul class="stats">
+  
+    
+    
+      <li class="categories">
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://adamoudad.github.io/categories/machine-learning">Machine Learning</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://adamoudad.github.io/categories/python">Python</a></li>
+          
+        </ul>
+      </li>
+    
+  
+  
+    
+    
+      <li class="tags">
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://adamoudad.github.io/tags/machine-learning">machine-learning</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://adamoudad.github.io/tags/python">python</a></li>
+          
+        </ul>
+      </li>
+    
+  
+</ul>
+
+  </footer>
+</article>
+
+    <article class="post">
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "adamoudad-github-io" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </article>
+
+
+
+
+<div class="pagination">
+  
+    <a href="/posts/format-dates-python3/" class="button"><div class="previous"><div>How to format dates in Python3</div></div></a>
+  
+  
+    <a href="/posts/pierre-corneille-bot/" class="button"><div class="next"><div>Ask this bot to solve your dilemmas</div></div></a>
+  
+</div>
+
+
+      </main>
+      <section id="site-sidebar">
+  
+    <section id="recent-posts">
+      <header>
+        <h1>Recent posts</h1>
+      </header>
+      
+      <article class="mini-post">
+        <section>
+          
+
+        </section>
+        <header>
+          <h1><a href="/posts/rsync/">The easy way to synchronize your data.</a></h1>
+          <time class="published" datetime="">June 30, 2024</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+        <section>
+          
+
+        </section>
+        <header>
+          <h1><a href="/posts/monty-hall/">The Monty Hall problem... Should I stay or should I change?</a></h1>
+          <time class="published" datetime="">February 24, 2024</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+        <section>
+          
+
+        </section>
+        <header>
+          <h1><a href="/posts/ecg-anomaly-detection/">Time-series anomaly detection with autoencoder</a></h1>
+          <time class="published" datetime="">July 23, 2023</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+        <section>
+          
+
+        </section>
+        <header>
+          <h1><a href="/posts/emacs/remote-command-ssh/">Run a command on a remote server with Emacs.</a></h1>
+          <time class="published" datetime="">December 22, 2022</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+        <section>
+          
+
+        </section>
+        <header>
+          <h1><a href="/posts/python-statements/">These Python keywords will simplify your code</a></h1>
+          <time class="published" datetime="">October 16, 2022</time>
+        </header>
+      </article>
+      
+      
+        <a href="/posts/" class="button">See more</a>
+      
+    </section>
+  
+
+  
+    
+      <section id="categories">
+        <header>
+          <h1><a href="/categories">Categories</a></h1>
+        </header>
+        <ul>
+          
+            
+          
+          
+          <li>
+            
+              <a href="/categories/machine-learning/">machine-learning<span class="count">10</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/programming/">programming<span class="count">7</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/linux/">linux<span class="count">4</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/natural-language-processing/">natural-language-processing<span class="count">3</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/python/">python<span class="count">3</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/emacs/">emacs<span class="count">2</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/japanese/">japanese<span class="count">2</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/security/">security<span class="count">2</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/web/">web<span class="count">2</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/computer/">computer<span class="count">1</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/linguistic/">linguistic<span class="count">1</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/random/">random<span class="count">1</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/statistics/">statistics<span class="count">1</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/tools/">tools<span class="count">1</span></a>
+            
+          
+          </li>
+        </ul>
+      </section>
+    
+  
+
+  
+    <section id="mini-bio">
+      <header>
+        <h1>About</h1>
+      </header>
+      <p>This website is a weblog were I write about computer science, machine learning, language learning.</p>
+      <footer>
+        <a href="/about" class="button">Learn More</a>
+      </footer>
+    </section>
+  
+</section>
+
+      <footer id="site-footer">
+  
+      <ul class="socnet-icons">
+        
+
+        <li><a href="//github.com/adamoudad" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+
+<li><a href="//stackoverflow.com/users/7013114/adam-oudad" target="_blank" rel="noopener" title="Stack Overflow" class="fab fa-stack-overflow"></a></li>
+
+
+
+
+
+
+
+
+<li><a href="//medium.com/@adam.oudad" target="_blank" rel="noopener" title="Medium" class="fab fa-medium"></a></li>
+<li><a href="//linkedin.com/in/adamoudad" target="_blank" rel="noopener" title="LinkedIn" class="fab fa-linkedin"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//twitter.com/OudadAdam" target="_blank" rel="noopener" title="Twitter" class="fab fa-twitter"></a></li>
+
+
+
+
+
+
+
+<li><a href="//researchgate.net/profile/Adam_Oudad" target="_blank" rel="noopener" title="Research Gate"><i class="ai ai-researchgate"></i></a></li>
+
+
+
+
+
+      </ul>
+  
+  <p class="copyright">
+    
+      &copy; 2024
+      
+        (Machine) Learning log.
+      
+    . <br>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.99.1' target='_blank' rel='noopener'>Hugo</a>
+  </p>
+</footer>
+<a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.css" integrity="sha384-D+9gmBxUQogRLqvARvNLmA9hS2x//eK1FhVb9PiU86gmcrBrJAQT8okdJ4LMp2uv" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.js" integrity="sha384-483A6DwYfKeDa0Q52fJmxFXkcPCFfnXMoXblOkJ4JcA8zATN6Tm78UNL72AKk+0O" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/contrib/auto-render.min.js" integrity="sha384-yACMu8JWxKzSp/C1YV86pzGiQ/l1YUfE8oPuahJQxzehAjEt2GiQuy/BIvl9KyeF" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+
+      <script src="/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script><script src="/js/bundle.min.d0b3e0b5f2cfc7467ead7d316ecb9dea4d29ef3c23ad300df9d7017ff98b2331.js" integrity="sha256-0LPgtfLPx0Z&#43;rX0xbsud6k0p7zwjrTAN&#43;dcBf/mLIzE="></script>
+    <script src="/js/add-on.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZKMEYDZ08Y"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-ZKMEYDZ08Y', { 'anonymize_ip': false });
+}
+</script>
+
+    </div>
+  </body>
+</html>

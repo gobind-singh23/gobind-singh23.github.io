@@ -1,0 +1,76 @@
+% Created 2020-05-13 Wed 22:03
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage{minted}
+\author{Adam Oudad}
+\date{\today}
+\title{}
+\hypersetup{
+ pdfauthor={Adam Oudad},
+ pdftitle={},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 26.3 (Org mode 9.1.2)}, 
+ pdflang={English}}
+\begin{document}
+
+\tableofcontents
+
+---
+title: "Have a bot haunt your Slack workspace"
+date: 2020-06-05
+categories: ["Programming", "Web"]
+tags: ["python", "web"]
+
+type: "post"
+---
+
+In this article we'll see how to code your simple bot for \href{https://slack.com}{Slack}, and schedule it to run regularily. As some testing might be necessary, I recommend to create a dummy Slack workspace for this tutorial.
+\section{Add a webhook for your Slack workspace}
+\label{sec:orgfbfa60b}
+We first need to configure a web hook to communicate to our Slack workspace. Go to \href{https://my.slack.com/services/new/incoming-webhook/}{this url}, choose your channel and click on add a webhook. In this tutorial, I choose to post to the \texttt{\#random} channel. The rest of the configuration can left as is, so you can save it.
+
+Copy your web hook url which should have the form \url{https://hooks.slack.com/services/SOME\_GIBBERISH\_CODE}.
+\section{Run the bot locally}
+\label{sec:orgc278e1e}
+Let's test locally the connection to the webhook we just created. We'll use python library \href{https://github.com/satoshi03/slack-python-webhook}{slackweb}. The code is straightforward. We'll put this in \texttt{slackbot.py}.
+\begin{minted}[]{python}
+#!/bin/python3
+#-*- encoding: utf-8 -*-
+import slackweb
+HOOK_URL='https://hooks.slack.com/services/SOME_GIBBERISH_CODE.'
+slack = slackweb.Slack(url=HOOK_URL)
+slack.notify(text="Hello world!")
+\end{minted}
+Replace your the content of \texttt{HOOK\_URL} by your hook url copied from the previous step. Then run the code and check if it works; you should see in \texttt{\#random} a message from your program. The first line of the above code specifies the location of the python interpreter to run, and the second line should be used if the file contains unicode characters, such as japanese kanji or french é, à, etc.
+\{\{< figure src="slackbot-hello\(_{\text{world.jpg}}\)" width="auto" caption="" >\}\}
+
+\section{Schedule the program}
+\label{sec:org757e4ee}
+You could decide to schedule the program to run on your own computer, but if you want it to run even when your computer is shut down, we need a web server. \href{https://www.pythonanywhere.com/}{PythonAnywhere} offers free server space and python environment for development purpose. So let's create an account and head to our \href{https://www.pythonanywhere.com/dashboard/}{PythonAnywhere dashboard}.
+\{\{< figure src="pythonanywhere\(_{\text{dashboard.jpg}}\)" width="auto" caption="" >\}\}
+Go to the \emph{Files} tab and upload your file \texttt{slackbot.py} to your directory \texttt{/home/your\_username/}.
+\{\{< figure src="pythonanywhere\(_{\text{files.jpg}}\)" width="auto" caption="" >\}\}
+Then, let's install the dependancy. Open a bash terminal and run \texttt{pip3 install -{}-user slackweb}.
+\{\{< figure src="pythonanywhere\(_{\text{bash.jpg}}\)" width="auto" caption="" >\}\}
+Inside the same terminal, we can check that everything works. Run \texttt{python3 slackbot.py}, and see if the message appears again in \#random channel.
+
+Scheduling is done in the \emph{Task} tab. Create your task by specifying a frequency and the command to run: \texttt{/home/adamoudad/slackbot.py}. You can see the expiry date of your task when you created it, which is probably roughly one month. For the free plan, PythonAnywhere requests you to log at least once a month for your scheduled tasks to remain valid.
+\{\{< figure src="pythonanywhere\(_{\text{tasks.jpg}}\)" width="auto" caption="" >\}\}
+\section{Conclusion}
+\label{sec:org9747f35}
+That's it! you have your Slack bot up and running on the web. And it will haunt your Slack workspace until the end of times\ldots{} cordially.
+\end{document}

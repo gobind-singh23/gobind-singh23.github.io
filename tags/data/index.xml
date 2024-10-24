@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>data on (Machine) Learning log.</title>
+    <link>https://adamoudad.github.io/tags/data/</link>
+    <description>Recent content in data on (Machine) Learning log.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 02 Dec 2019 03:49:04 +0900</lastBuildDate><atom:link href="https://adamoudad.github.io/tags/data/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Stream tweets with Tweepy in Python</title>
+      <link>https://adamoudad.github.io/posts/stream_tweets_tweepy/</link>
+      <pubDate>Mon, 02 Dec 2019 03:49:04 +0900</pubDate>
+      
+      <guid>https://adamoudad.github.io/posts/stream_tweets_tweepy/</guid>
+      <description>In this tutorial, you will learn how to stream tweets with Tweepy library in Python.  Twitter API overview  Twitter offers several API, or methods you can use to retrieve tweets.
+ Streaming API Search API  What we are interested in here is the streaming API. We will use it to stream statuses (this is the name given to tweets in Twitter’s API documentation). We want to connect the &amp;#34;statuses/sample&amp;#34; endpoint (documentation).</description>
+    </item>
+    
+    <item>
+      <title>List of datasets</title>
+      <link>https://adamoudad.github.io/posts/datasets/</link>
+      <pubDate>Wed, 30 Oct 2019 03:49:04 +0900</pubDate>
+      
+      <guid>https://adamoudad.github.io/posts/datasets/</guid>
+      <description>Machine Learning requires data. To obtain some, one way is to scrape or retrieve data directly from somewhere. Another way is to reuse datasets freely available over the internet, specially made for most common tasks. Because it has become so frequent for data scientists to take much time searching and processing data, Google has its own Dataset search tool. There are also big lists of datasets for research purpose, such as this one.</description>
+    </item>
+    
+  </channel>
+</rss>

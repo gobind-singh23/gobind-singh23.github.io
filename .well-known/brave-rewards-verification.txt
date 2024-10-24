@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: adamoudad.github.io
+Token: 78b7d5c4bf3834b317f430d6ae464cee328517a62929b43d4401a80c10b21c99

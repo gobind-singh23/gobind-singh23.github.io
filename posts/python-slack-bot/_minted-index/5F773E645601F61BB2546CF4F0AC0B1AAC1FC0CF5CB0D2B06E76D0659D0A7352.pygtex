@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+ch}{\PYGZsh{}!/bin/python3}
+\PYG{c+c1}{\PYGZsh{}\PYGZhy{}*\PYGZhy{} encoding: utf\PYGZhy{}8 \PYGZhy{}*\PYGZhy{}}
+\PYG{k+kn}{import} \PYG{n+nn}{slackweb}
+\PYG{n}{HOOK\PYGZus{}URL}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}https://hooks.slack.com/services/SOME\PYGZus{}GIBBERISH\PYGZus{}CODE.\PYGZsq{}}
+\PYG{n}{slack} \PYG{o}{=} \PYG{n}{slackweb}\PYG{o}{.}\PYG{n}{Slack}\PYG{p}{(}\PYG{n}{url}\PYG{o}{=}\PYG{n}{HOOK\PYGZus{}URL}\PYG{p}{)}
+\PYG{n}{slack}\PYG{o}{.}\PYG{n}{notify}\PYG{p}{(}\PYG{n}{text}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}Hello world!\PYGZdq{}}\PYG{p}{)}
+\end{Verbatim}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>classification on (Machine) Learning log.</title>
+    <link>https://adamoudad.github.io/tags/classification/</link>
+    <description>Recent content in classification on (Machine) Learning log.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 25 Mar 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://adamoudad.github.io/tags/classification/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A guided tour of classification metrics</title>
+      <link>https://adamoudad.github.io/posts/classification-metrics/</link>
+      <pubDate>Wed, 25 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://adamoudad.github.io/posts/classification-metrics/</guid>
+      <description>Accuracy, precision, recall, and F1-score are metrics used to assess automatic classifiers. These metrics are calculated from a confusion matrix. Say we have spam filter which tells whether a mail is spam or not. With a test dataset of 100 spam emails and 900 non-spam, we get the following results.
+    Actual class: Spam Actual class: Non-spam     Prediction class: Spam 85 100   Prediction class: Non-spam 15 800     This confusion matrix shows the confusions the system makes in its predictions.</description>
+    </item>
+    
+  </channel>
+</rss>
