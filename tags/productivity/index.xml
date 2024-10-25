@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>productivity on (Machine) Learning log.</title>
-    <link>https://adamoudad.github.io/tags/productivity/</link>
+    <link>https://gobind-singh23.github.io/tags/productivity/</link>
     <description>Recent content in productivity on (Machine) Learning log.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 22 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://adamoudad.github.io/tags/productivity/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 22 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://gobind-singh23.github.io/tags/productivity/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Run a command on a remote server with Emacs.</title>
-      <link>https://adamoudad.github.io/posts/emacs/remote-command-ssh/</link>
+      <link>https://gobind-singh23.github.io/posts/emacs/remote-command-ssh/</link>
       <pubDate>Thu, 22 Dec 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://adamoudad.github.io/posts/emacs/remote-command-ssh/</guid>
+      <guid>https://gobind-singh23.github.io/posts/emacs/remote-command-ssh/</guid>
       <description>Being able to automate things with Emacs can be painfully hard at times, and ridiculously easy, once we get our hands on the right tool.
  Let&amp;#39;s illustrate this by solving the following problem with Emacs.
  How to run a command on a remote server?
@@ -22,20 +22,20 @@
     
     <item>
       <title>Keynote presentation on Linux</title>
-      <link>https://adamoudad.github.io/posts/pdfpc/</link>
+      <link>https://gobind-singh23.github.io/posts/pdfpc/</link>
       <pubDate>Sat, 15 Oct 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://adamoudad.github.io/posts/pdfpc/</guid>
+      <guid>https://gobind-singh23.github.io/posts/pdfpc/</guid>
       <description>A great presentation software is a precious tool, even so when working remotely. If you are on MacOS, you will likely want to use Keynote, which has great features such as displaying a presenter view on one screen with a timer while displaying the presentation on another screen. On Linux, however, most PDF readers, like evince if you are using GNOME, have quite limited features for presenting.
  Recently I found about pdfpc, a great tool to do presentations with a PDF document, on Linux.</description>
     </item>
     
     <item>
       <title>Your python interpreter inside a docker container with Emacs</title>
-      <link>https://adamoudad.github.io/posts/emacs/docker-python-shell-emacs/</link>
+      <link>https://gobind-singh23.github.io/posts/emacs/docker-python-shell-emacs/</link>
       <pubDate>Mon, 06 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://adamoudad.github.io/posts/emacs/docker-python-shell-emacs/</guid>
+      <guid>https://gobind-singh23.github.io/posts/emacs/docker-python-shell-emacs/</guid>
       <description>Emacs has this very powerful package Elpy which is usually recommended if you want to code in Python.
  Docker can containerize your Python interpreter so that you can seemlessly run your applications on any device.
  In Emacs with elpy installed, C-c C-c binding (C is for Control key) runs elpy-shell-send-region-to-buffer and is very handy for running on the fly python commands for testing your code. It actually use the content of the variable python-shell-interpreter for the python interpreter.</description>
@@ -43,10 +43,10 @@
     
     <item>
       <title>Multiply your productivity by one million with these simple tricks</title>
-      <link>https://adamoudad.github.io/posts/productivity/</link>
+      <link>https://gobind-singh23.github.io/posts/productivity/</link>
       <pubDate>Thu, 10 Oct 2019 03:49:04 +0900</pubDate>
       
-      <guid>https://adamoudad.github.io/posts/productivity/</guid>
+      <guid>https://gobind-singh23.github.io/posts/productivity/</guid>
       <description>The idea behind most productivity tips is that you lose if you touch your mouse, as it is such a time consuming move and unbearable physical effort.
  But you also lose points when doing big jumps on your keyboard, for example when you try reaching for the arrow keys.
  So what should we do ? Here are some tips.

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>embedding on (Machine) Learning log.</title>
-    <link>https://adamoudad.github.io/tags/embedding/</link>
+    <link>https://gobind-singh23.github.io/tags/embedding/</link>
     <description>Recent content in embedding on (Machine) Learning log.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 27 Nov 2019 03:49:04 +0900</lastBuildDate><atom:link href="https://adamoudad.github.io/tags/embedding/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 27 Nov 2019 03:49:04 +0900</lastBuildDate><atom:link href="https://gobind-singh23.github.io/tags/embedding/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Vectorizing text: Word2Vec</title>
-      <link>https://adamoudad.github.io/posts/word2vec/</link>
+      <link>https://gobind-singh23.github.io/posts/word2vec/</link>
       <pubDate>Wed, 27 Nov 2019 03:49:04 +0900</pubDate>
       
-      <guid>https://adamoudad.github.io/posts/word2vec/</guid>
+      <guid>https://gobind-singh23.github.io/posts/word2vec/</guid>
       <description>The idea with greatest impact in Word2Vec1 2 was that vector representations could capture linguistic regularities, which can be retrieved through vector arithmetics
 vec(&amp;#39;Rome&amp;#39;) ≈ vec(&amp;#39;Paris&amp;#39;) - vec(&amp;#39;France&amp;#39;) + vec(&amp;#39;Italy&amp;#39;) vec(&amp;#39;Queen&amp;#39;) ≈ vec(&amp;#39;King&amp;#39;) - vec(&amp;#39;Man&amp;#39;) + vec(&amp;#39;Woman&amp;#39;)  Awesome ! How could such results be achieved ? They came from the following assumption
  The meaning of a word can be inferred by the company it keeps
@@ -21,20 +21,20 @@ vec(&amp;#39;Rome&amp;#39;) ≈ vec(&amp;#39;Paris&amp;#39;) - vec(&amp;#39;Fran
     
     <item>
       <title>Word embeddings with sound</title>
-      <link>https://adamoudad.github.io/posts/sound-word2vec/</link>
+      <link>https://gobind-singh23.github.io/posts/sound-word2vec/</link>
       <pubDate>Mon, 21 Oct 2019 03:49:04 +0900</pubDate>
       
-      <guid>https://adamoudad.github.io/posts/sound-word2vec/</guid>
+      <guid>https://gobind-singh23.github.io/posts/sound-word2vec/</guid>
       <description>I came across this article called Sound-Word2Vec:Learning Word Representations Grounded in Sounds1, which caught my attention as it aims at creating word embeddings in an original way, using voiced sounds of words.
 What is embedding  Embedding in Machine Learning refers to a method for capturing the information of an input data into a dense representation. This way, we obtain an embedding space, which should have interesting properties like being friendly to vector arithmetics, which is not the case of original raw data.</description>
     </item>
     
     <item>
       <title>Vectorizing text</title>
-      <link>https://adamoudad.github.io/posts/vectorizing-text/</link>
+      <link>https://gobind-singh23.github.io/posts/vectorizing-text/</link>
       <pubDate>Thu, 17 Oct 2019 03:49:04 +0900</pubDate>
       
-      <guid>https://adamoudad.github.io/posts/vectorizing-text/</guid>
+      <guid>https://gobind-singh23.github.io/posts/vectorizing-text/</guid>
       <description>Character, word, sentence and document embeddings are popular because they are efficient. In the case of words, such embeddings represent words in their meaning, their role and their hierarchy in texts.
  We have seen a clear improvement of word embeddings thanks to Mikolov et al. at Google, with Word2Vec in 2013. Since then, many kinds of embeddings have been developped for different purposes. We can cite for example Fasttext by Facebook, Bert by Google.</description>
     </item>

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>themes on Adam Oudad</title>
-    <link>https://adamoudad.github.io/tags/themes/</link>
+    <link>https://gobind-singh23.github.io/tags/themes/</link>
     <description>Recent content in themes on Adam Oudad</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 28 Sep 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://adamoudad.github.io/tags/themes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 28 Sep 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://gobind-singh23.github.io/tags/themes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About</title>
-      <link>https://adamoudad.github.io/about/</link>
+      <link>https://gobind-singh23.github.io/about/</link>
       <pubDate>Fri, 28 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://adamoudad.github.io/about/</guid>
+      <guid>https://gobind-singh23.github.io/about/</guid>
       <description>I write code to automate things, compose music, and analyze data. My main interests are in machine learning, natural language processing and music processing, but I also read on various topics such as decentralized technologies, and mathetmatics in general.
 My projects  You can check my public projects on https://github.com/adamoudad/
  They include melody generation using LSTM, hashtag annotation for text, easy playlist creator for youtube videos without needing an account, algorithmic trading, scripts for web scraping, and more to come !</description>

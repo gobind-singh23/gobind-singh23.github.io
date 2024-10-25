@@ -2,287 +2,287 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on (Machine) Learning log.</title>
-    <link>https://adamoudad.github.io/tags/</link>
+    <link>https://gobind-singh23.github.io/tags/</link>
     <description>Recent content in Tags on (Machine) Learning log.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 30 Jun 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://adamoudad.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 30 Jun 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://gobind-singh23.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>rsync</title>
-      <link>https://adamoudad.github.io/tags/rsync/</link>
+      <link>https://gobind-singh23.github.io/tags/rsync/</link>
       <pubDate>Sun, 30 Jun 2024 00:00:00 +0000</pubDate>
       
-      <guid>https://adamoudad.github.io/tags/rsync/</guid>
+      <guid>https://gobind-singh23.github.io/tags/rsync/</guid>
       <description></description>
     </item>
     
     <item>
       <title>psychology</title>
-      <link>https://adamoudad.github.io/tags/psychology/</link>
+      <link>https://gobind-singh23.github.io/tags/psychology/</link>
       <pubDate>Sat, 24 Feb 2024 00:00:00 +0000</pubDate>
       
-      <guid>https://adamoudad.github.io/tags/psychology/</guid>
+      <guid>https://gobind-singh23.github.io/tags/psychology/</guid>
       <description></description>
     </item>
     
     <item>
       <title>python</title>
-      <link>https://adamoudad.github.io/tags/python/</link>
+      <link>https://gobind-singh23.github.io/tags/python/</link>
       <pubDate>Sat, 24 Feb 2024 00:00:00 +0000</pubDate>
       
-      <guid>https://adamoudad.github.io/tags/python/</guid>
+      <guid>https://gobind-singh23.github.io/tags/python/</guid>
       <description></description>
     </item>
     
     <item>
       <title>statistics</title>
-      <link>https://adamoudad.github.io/tags/statistics/</link>
+      <link>https://gobind-singh23.github.io/tags/statistics/</link>
       <pubDate>Sat, 24 Feb 2024 00:00:00 +0000</pubDate>
       
-      <guid>https://adamoudad.github.io/tags/statistics/</guid>
+      <guid>https://gobind-singh23.github.io/tags/statistics/</guid>
       <description></description>
     </item>
     
     <item>
       <title>anomaly-detection</title>
-      <link>https://adamoudad.github.io/tags/anomaly-detection/</link>
+      <link>https://gobind-singh23.github.io/tags/anomaly-detection/</link>
       <pubDate>Sun, 23 Jul 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://adamoudad.github.io/tags/anomaly-detection/</guid>
+      <guid>https://gobind-singh23.github.io/tags/anomaly-detection/</guid>
       <description></description>
     </item>
     
     <item>
       <title>machine-learning</title>
-      <link>https://adamoudad.github.io/tags/machine-learning/</link>
+      <link>https://gobind-singh23.github.io/tags/machine-learning/</link>
       <pubDate>Sun, 23 Jul 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://adamoudad.github.io/tags/machine-learning/</guid>
+      <guid>https://gobind-singh23.github.io/tags/machine-learning/</guid>
       <description></description>
     </item>
     
     <item>
       <title>time-series</title>
-      <link>https://adamoudad.github.io/tags/time-series/</link>
+      <link>https://gobind-singh23.github.io/tags/time-series/</link>
       <pubDate>Sun, 23 Jul 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://adamoudad.github.io/tags/time-series/</guid>
+      <guid>https://gobind-singh23.github.io/tags/time-series/</guid>
       <description></description>
     </item>
     
     <item>
       <title>emacs</title>
-      <link>https://adamoudad.github.io/tags/emacs/</link>
+      <link>https://gobind-singh23.github.io/tags/emacs/</link>
       <pubDate>Thu, 22 Dec 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://adamoudad.github.io/tags/emacs/</guid>
+      <guid>https://gobind-singh23.github.io/tags/emacs/</guid>
       <description></description>
     </item>
     
     <item>
       <title>productivity</title>
-      <link>https://adamoudad.github.io/tags/productivity/</link>
+      <link>https://gobind-singh23.github.io/tags/productivity/</link>
       <pubDate>Thu, 22 Dec 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://adamoudad.github.io/tags/productivity/</guid>
+      <guid>https://gobind-singh23.github.io/tags/productivity/</guid>
       <description></description>
     </item>
     
     <item>
       <title>programming</title>
-      <link>https://adamoudad.github.io/tags/programming/</link>
+      <link>https://gobind-singh23.github.io/tags/programming/</link>
       <pubDate>Thu, 22 Dec 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://adamoudad.github.io/tags/programming/</guid>
+      <guid>https://gobind-singh23.github.io/tags/programming/</guid>
       <description></description>
     </item>
     
     <item>
       <title>tips</title>
-      <link>https://adamoudad.github.io/tags/tips/</link>
+      <link>https://gobind-singh23.github.io/tags/tips/</link>
       <pubDate>Mon, 05 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://adamoudad.github.io/tags/tips/</guid>
+      <guid>https://gobind-singh23.github.io/tags/tips/</guid>
       <description></description>
     </item>
     
     <item>
       <title>keras</title>
-      <link>https://adamoudad.github.io/tags/keras/</link>
+      <link>https://gobind-singh23.github.io/tags/keras/</link>
       <pubDate>Sat, 20 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://adamoudad.github.io/tags/keras/</guid>
+      <guid>https://gobind-singh23.github.io/tags/keras/</guid>
       <description></description>
     </item>
     
     <item>
       <title>pytorch</title>
-      <link>https://adamoudad.github.io/tags/pytorch/</link>
+      <link>https://gobind-singh23.github.io/tags/pytorch/</link>
       <pubDate>Sat, 20 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://adamoudad.github.io/tags/pytorch/</guid>
+      <guid>https://gobind-singh23.github.io/tags/pytorch/</guid>
       <description></description>
     </item>
     
     <item>
       <title>android</title>
-      <link>https://adamoudad.github.io/tags/android/</link>
+      <link>https://gobind-singh23.github.io/tags/android/</link>
       <pubDate>Sat, 16 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://adamoudad.github.io/tags/android/</guid>
+      <guid>https://gobind-singh23.github.io/tags/android/</guid>
       <description></description>
     </item>
     
     <item>
       <title>security</title>
-      <link>https://adamoudad.github.io/tags/security/</link>
+      <link>https://gobind-singh23.github.io/tags/security/</link>
       <pubDate>Sat, 16 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://adamoudad.github.io/tags/security/</guid>
+      <guid>https://gobind-singh23.github.io/tags/security/</guid>
       <description></description>
     </item>
     
     <item>
       <title>natural-language-processing</title>
-      <link>https://adamoudad.github.io/tags/natural-language-processing/</link>
+      <link>https://gobind-singh23.github.io/tags/natural-language-processing/</link>
       <pubDate>Wed, 18 Nov 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://adamoudad.github.io/tags/natural-language-processing/</guid>
+      <guid>https://gobind-singh23.github.io/tags/natural-language-processing/</guid>
       <description></description>
     </item>
     
     <item>
       <title>linux</title>
-      <link>https://adamoudad.github.io/tags/linux/</link>
+      <link>https://gobind-singh23.github.io/tags/linux/</link>
       <pubDate>Thu, 18 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://adamoudad.github.io/tags/linux/</guid>
+      <guid>https://gobind-singh23.github.io/tags/linux/</guid>
       <description></description>
     </item>
     
     <item>
       <title>web</title>
-      <link>https://adamoudad.github.io/tags/web/</link>
+      <link>https://gobind-singh23.github.io/tags/web/</link>
       <pubDate>Thu, 21 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://adamoudad.github.io/tags/web/</guid>
+      <guid>https://gobind-singh23.github.io/tags/web/</guid>
       <description></description>
     </item>
     
     <item>
       <title>docker</title>
-      <link>https://adamoudad.github.io/tags/docker/</link>
+      <link>https://gobind-singh23.github.io/tags/docker/</link>
       <pubDate>Mon, 06 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://adamoudad.github.io/tags/docker/</guid>
+      <guid>https://gobind-singh23.github.io/tags/docker/</guid>
       <description></description>
     </item>
     
     <item>
       <title>classification</title>
-      <link>https://adamoudad.github.io/tags/classification/</link>
+      <link>https://gobind-singh23.github.io/tags/classification/</link>
       <pubDate>Wed, 25 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://adamoudad.github.io/tags/classification/</guid>
+      <guid>https://gobind-singh23.github.io/tags/classification/</guid>
       <description></description>
     </item>
     
     <item>
       <title>grammar</title>
-      <link>https://adamoudad.github.io/tags/grammar/</link>
+      <link>https://gobind-singh23.github.io/tags/grammar/</link>
       <pubDate>Fri, 24 Jan 2020 02:31:19 +0900</pubDate>
       
-      <guid>https://adamoudad.github.io/tags/grammar/</guid>
+      <guid>https://gobind-singh23.github.io/tags/grammar/</guid>
       <description></description>
     </item>
     
     <item>
       <title>japanese</title>
-      <link>https://adamoudad.github.io/tags/japanese/</link>
+      <link>https://gobind-singh23.github.io/tags/japanese/</link>
       <pubDate>Fri, 24 Jan 2020 02:31:19 +0900</pubDate>
       
-      <guid>https://adamoudad.github.io/tags/japanese/</guid>
+      <guid>https://gobind-singh23.github.io/tags/japanese/</guid>
       <description></description>
     </item>
     
     <item>
       <title>api</title>
-      <link>https://adamoudad.github.io/tags/api/</link>
+      <link>https://gobind-singh23.github.io/tags/api/</link>
       <pubDate>Mon, 02 Dec 2019 03:49:04 +0900</pubDate>
       
-      <guid>https://adamoudad.github.io/tags/api/</guid>
+      <guid>https://gobind-singh23.github.io/tags/api/</guid>
       <description></description>
     </item>
     
     <item>
       <title>data</title>
-      <link>https://adamoudad.github.io/tags/data/</link>
+      <link>https://gobind-singh23.github.io/tags/data/</link>
       <pubDate>Mon, 02 Dec 2019 03:49:04 +0900</pubDate>
       
-      <guid>https://adamoudad.github.io/tags/data/</guid>
+      <guid>https://gobind-singh23.github.io/tags/data/</guid>
       <description></description>
     </item>
     
     <item>
       <title>hacking</title>
-      <link>https://adamoudad.github.io/tags/hacking/</link>
+      <link>https://gobind-singh23.github.io/tags/hacking/</link>
       <pubDate>Mon, 02 Dec 2019 03:49:04 +0900</pubDate>
       
-      <guid>https://adamoudad.github.io/tags/hacking/</guid>
+      <guid>https://gobind-singh23.github.io/tags/hacking/</guid>
       <description></description>
     </item>
     
     <item>
       <title>embedding</title>
-      <link>https://adamoudad.github.io/tags/embedding/</link>
+      <link>https://gobind-singh23.github.io/tags/embedding/</link>
       <pubDate>Wed, 27 Nov 2019 03:49:04 +0900</pubDate>
       
-      <guid>https://adamoudad.github.io/tags/embedding/</guid>
+      <guid>https://gobind-singh23.github.io/tags/embedding/</guid>
       <description></description>
     </item>
     
     <item>
       <title>nlp</title>
-      <link>https://adamoudad.github.io/tags/nlp/</link>
+      <link>https://gobind-singh23.github.io/tags/nlp/</link>
       <pubDate>Wed, 27 Nov 2019 03:49:04 +0900</pubDate>
       
-      <guid>https://adamoudad.github.io/tags/nlp/</guid>
+      <guid>https://gobind-singh23.github.io/tags/nlp/</guid>
       <description></description>
     </item>
     
     <item>
       <title>hugo</title>
-      <link>https://adamoudad.github.io/tags/hugo/</link>
+      <link>https://gobind-singh23.github.io/tags/hugo/</link>
       <pubDate>Mon, 20 May 2019 03:49:04 +0900</pubDate>
       
-      <guid>https://adamoudad.github.io/tags/hugo/</guid>
+      <guid>https://gobind-singh23.github.io/tags/hugo/</guid>
       <description></description>
     </item>
     
     <item>
       <title>katex</title>
-      <link>https://adamoudad.github.io/tags/katex/</link>
+      <link>https://gobind-singh23.github.io/tags/katex/</link>
       <pubDate>Mon, 20 May 2019 03:49:04 +0900</pubDate>
       
-      <guid>https://adamoudad.github.io/tags/katex/</guid>
+      <guid>https://gobind-singh23.github.io/tags/katex/</guid>
       <description></description>
     </item>
     
     <item>
       <title>latex</title>
-      <link>https://adamoudad.github.io/tags/latex/</link>
+      <link>https://gobind-singh23.github.io/tags/latex/</link>
       <pubDate>Mon, 20 May 2019 03:49:04 +0900</pubDate>
       
-      <guid>https://adamoudad.github.io/tags/latex/</guid>
+      <guid>https://gobind-singh23.github.io/tags/latex/</guid>
       <description></description>
     </item>
     
     <item>
       <title>first</title>
-      <link>https://adamoudad.github.io/tags/first/</link>
+      <link>https://gobind-singh23.github.io/tags/first/</link>
       <pubDate>Thu, 16 May 2019 02:31:19 +0900</pubDate>
       
-      <guid>https://adamoudad.github.io/tags/first/</guid>
+      <guid>https://gobind-singh23.github.io/tags/first/</guid>
       <description></description>
     </item>
     

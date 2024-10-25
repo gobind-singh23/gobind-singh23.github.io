@@ -2,27 +2,27 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>keras on (Machine) Learning log.</title>
-    <link>https://adamoudad.github.io/tags/keras/</link>
+    <link>https://gobind-singh23.github.io/tags/keras/</link>
     <description>Recent content in keras on (Machine) Learning log.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 20 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://adamoudad.github.io/tags/keras/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 20 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://gobind-singh23.github.io/tags/keras/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Comparing Keras and PyTorch on sentiment classification</title>
-      <link>https://adamoudad.github.io/posts/keras_torch_comparison/sentiment_classification/</link>
+      <link>https://gobind-singh23.github.io/posts/keras_torch_comparison/sentiment_classification/</link>
       <pubDate>Sat, 20 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://adamoudad.github.io/posts/keras_torch_comparison/sentiment_classification/</guid>
+      <guid>https://gobind-singh23.github.io/posts/keras_torch_comparison/sentiment_classification/</guid>
       <description>After part one which covered an overview of Keras and PyTorch syntaxes, this is part two of how to switch between Keras and PyTorch. We will implement a neural network to classify movie reviews by sentiment.
  Keras is aimed at fast prototyping. It is designed to write less code, letting the developper focus on other tasks such as data preparation, processing, cleaning, etc PyTorch is aimed at modularity and versatility.</description>
     </item>
     
     <item>
       <title>Comparison of Keras and PyTorch syntaxes</title>
-      <link>https://adamoudad.github.io/posts/keras_torch_comparison/syntax/</link>
+      <link>https://gobind-singh23.github.io/posts/keras_torch_comparison/syntax/</link>
       <pubDate>Tue, 02 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://adamoudad.github.io/posts/keras_torch_comparison/syntax/</guid>
+      <guid>https://gobind-singh23.github.io/posts/keras_torch_comparison/syntax/</guid>
       <description>Keras and PyTorch are popular frameworks for building programs with deep learning. The former, Keras, is more precisely an abstraction layer for Tensorflow and offers the capability to prototype models fast. There are similar abstraction layers developped on top of PyTorch, such as PyTorch Ignite or PyTorch lightning. They are not yet as mature as Keras, but are worth the try!
  I found few resources or articles comparing codes in both Keras and PyTorch and I will show such example in this article, to help understand the key differences in terms of syntax and naming between frameworks.</description>
     </item>

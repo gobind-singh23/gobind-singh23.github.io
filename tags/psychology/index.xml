@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>psychology on (Machine) Learning log.</title>
-    <link>https://adamoudad.github.io/tags/psychology/</link>
+    <link>https://gobind-singh23.github.io/tags/psychology/</link>
     <description>Recent content in psychology on (Machine) Learning log.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 24 Feb 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://adamoudad.github.io/tags/psychology/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 24 Feb 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://gobind-singh23.github.io/tags/psychology/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The Monty Hall problem... Should I stay or should I change?</title>
-      <link>https://adamoudad.github.io/posts/monty-hall/</link>
+      <link>https://gobind-singh23.github.io/posts/monty-hall/</link>
       <pubDate>Sat, 24 Feb 2024 00:00:00 +0000</pubDate>
       
-      <guid>https://adamoudad.github.io/posts/monty-hall/</guid>
+      <guid>https://gobind-singh23.github.io/posts/monty-hall/</guid>
       <description>If you set up a lottery game, and your game happens to have some flaws, it is a bad idea to let mathematicians participate. They would just ruin the game1!
  But there is no superpower needed, it is just statistics. Moreover, with computing, we can simulate and understand better games involving randomness.
  In this article, we will see if we can find some mathematician&amp;#39;s hacks to a popular TV game requiring psychology and some calculations.</description>

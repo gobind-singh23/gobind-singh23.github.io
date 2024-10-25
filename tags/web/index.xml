@@ -2,27 +2,27 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>web on (Machine) Learning log.</title>
-    <link>https://adamoudad.github.io/tags/web/</link>
+    <link>https://gobind-singh23.github.io/tags/web/</link>
     <description>Recent content in web on (Machine) Learning log.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 21 May 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://adamoudad.github.io/tags/web/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 21 May 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://gobind-singh23.github.io/tags/web/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Have a bot haunt your Slack workspace</title>
-      <link>https://adamoudad.github.io/posts/python-slack-bot/</link>
+      <link>https://gobind-singh23.github.io/posts/python-slack-bot/</link>
       <pubDate>Thu, 21 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://adamoudad.github.io/posts/python-slack-bot/</guid>
+      <guid>https://gobind-singh23.github.io/posts/python-slack-bot/</guid>
       <description>In this article we&amp;#39;ll see how to code your simple bot for Slack, and schedule it to run regularily. As some testing might be necessary, I recommend to create a dummy Slack workspace for this tutorial.
 Add a webhook for your Slack workspace  We first need to configure a web hook to communicate to our Slack workspace. Go to this url, choose your channel and click on add a webhook.</description>
     </item>
     
     <item>
       <title>Hugo and Katex</title>
-      <link>https://adamoudad.github.io/posts/hugo-katex/</link>
+      <link>https://gobind-singh23.github.io/posts/hugo-katex/</link>
       <pubDate>Mon, 20 May 2019 03:49:04 +0900</pubDate>
       
-      <guid>https://adamoudad.github.io/posts/hugo-katex/</guid>
+      <guid>https://gobind-singh23.github.io/posts/hugo-katex/</guid>
       <description>I followed this good tutorial on how to add \(\KaTeX\) to hugo.
  Here is an example showing that KaTeX (should) now work. $$\int_{a}^{b} x^2 dx$$
  Here are some remarks I have about the original tutorial.

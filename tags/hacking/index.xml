@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>hacking on (Machine) Learning log.</title>
-    <link>https://adamoudad.github.io/tags/hacking/</link>
+    <link>https://gobind-singh23.github.io/tags/hacking/</link>
     <description>Recent content in hacking on (Machine) Learning log.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 02 Dec 2019 03:49:04 +0900</lastBuildDate><atom:link href="https://adamoudad.github.io/tags/hacking/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 02 Dec 2019 03:49:04 +0900</lastBuildDate><atom:link href="https://gobind-singh23.github.io/tags/hacking/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>TubeChiller, an automatic youtube videos player</title>
-      <link>https://adamoudad.github.io/posts/tubechiller/</link>
+      <link>https://gobind-singh23.github.io/posts/tubechiller/</link>
       <pubDate>Mon, 02 Dec 2019 03:49:04 +0900</pubDate>
       
-      <guid>https://adamoudad.github.io/posts/tubechiller/</guid>
+      <guid>https://gobind-singh23.github.io/posts/tubechiller/</guid>
       <description>I wrote a youtube playlist generator in javascript. TubeChiller is a tool for automatically play youtube videos provided in a list of urls.
   Credit: https://pixabay.com/images/id-3080834/
   Background  I have been browsing youtube and ended up with a significant amount of youtube urls in my bookmarks, that point to musics or podcasts.

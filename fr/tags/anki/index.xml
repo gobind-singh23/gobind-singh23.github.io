@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>anki on (Machine) Learning log.</title>
-    <link>https://adamoudad.github.io/fr/tags/anki/</link>
+    <link>https://gobind-singh23.github.io/fr/tags/anki/</link>
     <description>Recent content in anki on (Machine) Learning log.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr</language>
-    <lastBuildDate>Tue, 26 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://adamoudad.github.io/fr/tags/anki/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 26 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://gobind-singh23.github.io/fr/tags/anki/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Apprendre les formules de trigonométrie grâce à \(\LaTeX\) et Anki</title>
-      <link>https://adamoudad.github.io/fr/posts/anki-latex/</link>
+      <link>https://gobind-singh23.github.io/fr/posts/anki-latex/</link>
       <pubDate>Tue, 26 Jul 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://adamoudad.github.io/fr/posts/anki-latex/</guid>
+      <guid>https://gobind-singh23.github.io/fr/posts/anki-latex/</guid>
       <description>Anki est un logiciel de d&amp;#39;apprentissage par répétitions espacées1. Il supporte la saisie de formules en utilisant le langage \(\LaTeX\). Nous allons voir ici comment faire.
  Vous pouvez commencer par créer un nouveau paquet de cartes dans Anki qu&amp;#39;on nommera par exemple Trigonométrie.
 Les balises de formule  Pour commencer à écrire une formule, il faut d&amp;#39;abord spécifier le début et la fin de la formule. Selon les logiciels ou les interpréteurs, la syntaxe varie.</description>

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>natural-language-processing on (Machine) Learning log.</title>
-    <link>https://adamoudad.github.io/tags/natural-language-processing/</link>
+    <link>https://gobind-singh23.github.io/tags/natural-language-processing/</link>
     <description>Recent content in natural-language-processing on (Machine) Learning log.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 18 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://adamoudad.github.io/tags/natural-language-processing/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 18 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://gobind-singh23.github.io/tags/natural-language-processing/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ask this bot to solve your dilemmas</title>
-      <link>https://adamoudad.github.io/posts/pierre-corneille-bot/</link>
+      <link>https://gobind-singh23.github.io/posts/pierre-corneille-bot/</link>
       <pubDate>Wed, 18 Nov 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://adamoudad.github.io/posts/pierre-corneille-bot/</guid>
+      <guid>https://gobind-singh23.github.io/posts/pierre-corneille-bot/</guid>
       <description>Life is full of dilemma and tough choices for our greatest enjoyment. Well, some might be annoying to resolve. So I present to you the contribution from machine learning in the direction of relieving ourselves the burden of having to make choices in our lives.
  You probably have played a popular game named &amp;#34;Would you rather&amp;#34; in which two options are considered and only one should be chosen. It can be between two equally unwanted things: would you rather &amp;#34;lose the ability to feel emotions&amp;#34; or &amp;#34;be physically paralyzed&amp;#34;.</description>
     </item>

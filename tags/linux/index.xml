@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>linux on (Machine) Learning log.</title>
-    <link>https://adamoudad.github.io/tags/linux/</link>
+    <link>https://gobind-singh23.github.io/tags/linux/</link>
     <description>Recent content in linux on (Machine) Learning log.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 18 Jun 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://adamoudad.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 18 Jun 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://gobind-singh23.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Schedule random aphorism notifications for your desktop</title>
-      <link>https://adamoudad.github.io/posts/random-aphorism-notifications/</link>
+      <link>https://gobind-singh23.github.io/posts/random-aphorism-notifications/</link>
       <pubDate>Thu, 18 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://adamoudad.github.io/posts/random-aphorism-notifications/</guid>
+      <guid>https://gobind-singh23.github.io/posts/random-aphorism-notifications/</guid>
       <description>In times when we lack inspiration, it might help to have a program randomly picking an aphorism for us. An aphorism is a concise expression of a general truth or principle. But you can also use a joke or anything else.
  Let&amp;#39;s see how we can implement this with desktop notifications, python, and cron.
 Requirements  You will need these
@@ -21,10 +21,10 @@ Requirements  You will need these
     
     <item>
       <title>Remote desktop with Linux client and Windows server</title>
-      <link>https://adamoudad.github.io/posts/remote_desktop_linux_windows/</link>
+      <link>https://gobind-singh23.github.io/posts/remote_desktop_linux_windows/</link>
       <pubDate>Fri, 13 Mar 2020 03:49:04 +0900</pubDate>
       
-      <guid>https://adamoudad.github.io/posts/remote_desktop_linux_windows/</guid>
+      <guid>https://gobind-singh23.github.io/posts/remote_desktop_linux_windows/</guid>
       <description>I just had to set up a remote desktop between Linux and Windows, to find out how intricate of a problem it can become. My goal was to access a Windows desktop from my Linux machine.
 Remmina and Windows RDP  I first tried using my go-to software, Remmina client on Linux, using the plugin for connecting to Windows remote desktop protocol (RDP). There were various unsuccessful attempts, with different settings.</description>
     </item>
