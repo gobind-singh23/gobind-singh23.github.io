@@ -4,21 +4,12 @@ permalink: /research/
 title: Research
 ---
 
-Describe your research interests here.
+Research is a field I've spent a lot of time in but struggled to get any real output or result that can lead to a paper publication. I've spent most of my time reading research papers and implementing changes to codebases. I've gotten very proficient with understanding and writing code. Here are a few things that I have worked upon: 
 
 <h2>Publications</h2>
 <ul>
 	<li>
-		<b>"Paper title #1"</b><br>
-		<i>List of authors</i><br>
-		Conference, Year<br>
-		<a href=""><div class="color-button">pdf</div></a><a href=""><div class="color-button">cite</div></a><a href=""><div class="color-button">code</div></a>
-	</li><br>
-	<li>
-		<b>"Paper title #1"</b><br>
-		<i>List of authors</i><br>
-		Conference, Year<br>
-		<a href=""><div class="color-button">pdf</div></a><a href=""><div class="color-button">cite</div></a><a href=""><div class="color-button">code</div></a>
+		<b>"None as of now :("</b><br>
 	</li><br>
 </ul>
 
