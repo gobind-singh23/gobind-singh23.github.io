@@ -4,33 +4,31 @@ title: Key Courses Undertaken
 permalink: /miscellany/courses/
 ---
 
-<h2>At &lt;your university name&gt;</h2>
+<h2>At BITS Pilani</h2>
 
-<h3>Department 1</h3>
+<h3>Computer Science and Information Systems</h3>
 
-<a href="">CS335</a>: Arificial Intelligence and Machine Learning* <sup>&dagger;</sup>
-<b>&nbsp;&middot;&nbsp;</b> <a href="">CS726</a>: Advanced Machine Learning*
-<b>&nbsp;&middot;&nbsp;</b> <a href="">CS302</a>: Implementation of Programming Languages* <sup>&dagger;</sup>
-<b>&nbsp;&middot;&nbsp;</b> <a href="">CS310</a>: Automata Theory*
-<b>&nbsp;&middot;&nbsp;</b> <a href="">CS663</a>: Fundamentals of Digital Image Processing
-<b>&nbsp;&middot;&nbsp;</b> <a href="">CS475</a>: Computer Graphics
+<b>&nbsp;&middot;&nbsp;</b> <a href="">CS F726</a>: Data Structures and Algorithms
+<b>&nbsp;&middot;&nbsp;</b> <a href="">CS F726</a>: Operating Systems
+<b>&nbsp;&middot;&nbsp;</b> <a href="">CS F302</a>: Computer Architecture
+<b>&nbsp;&middot;&nbsp;</b> <a href="">SI F402</a>: Design and Analysis of Algorithms
+<b>&nbsp;&middot;&nbsp;</b> <a href="">CS F310</a>: Theory of Computation (Automata Theory)
+<b>&nbsp;&middot;&nbsp;</b> <a href="">CS F663</a>: Compiler Contstruction
+<b>&nbsp;&middot;&nbsp;</b> <a href="">CS F475</a>: Object Oriented Programming
+<b>&nbsp;&middot;&nbsp;</b> <a href="">CS F475</a>: Computer Networks
+<b>&nbsp;&middot;&nbsp;</b> <a href="">CS F475</a>: Computer Vision
+<b>&nbsp;&middot;&nbsp;</b> <a href="">CS F475</a>: Introduction To LLMs
+<b>&nbsp;&middot;&nbsp;</b> <a href="">CS F475</a>: Information Retrieval
+<b>&nbsp;&middot;&nbsp;</b> <a href="">CS F475</a>: Logic In Computer Science
 
-<h3>Department 2</h3>
-<a href="">SI404</a>: Applied Stochastic Processes*
-<b>&nbsp;&middot;&nbsp;</b> <a href="">SI402</a>: Statistical Inference
-<b>&nbsp;&middot;&nbsp;</b> <a href="">SI417</a>: Introduction to Probability Theory
+<h3>Department of Mathematics</h3>
 
-<h3>Department 3</h3>
-<a href="">MA214</a>: Introduction to Numerical Analysis*
-<b>&nbsp;&middot;&nbsp;</b> <a href="">MA106</a>: Linear Algebra
-<b>&nbsp;&middot;&nbsp;</b> <a href="">MA108</a>: Differential Equations
-<b>&nbsp;&middot;&nbsp;</b> <a href="">MA105</a>: Calculus
+<b>&nbsp;&middot;&nbsp;</b> <a href="">SI402</a>: Linear Algebra and Complex Variable Analysis
+<b>&nbsp;&middot;&nbsp;</b> <a href="">SI402</a>: Applied Statistical Methods
+<b>&nbsp;&middot;&nbsp;</b> <a href="">SI402</a>: Probability and Statistics
+<b>&nbsp;&middot;&nbsp;</b> <a href="">SI417</a>: Differential Equations
 
 
-<h2>MOOC</h2>
-<a href="http://cs231n.stanford.edu/">CS231n</a>: Convolutional Neural Networks for Visual Recognition
-<b>&nbsp;&middot;&nbsp;</b> <a href="http://cs224d.stanford.edu/">CS224d</a>: Deep Learning for Natural Language Processing
-
-<div align= "right">
-	*<i>pursuing currently</i><br><sup>&dagger;</sup><i>accompanied by a separate lab course</i>
-</div>
+<h2>Coursera</h2>
+<a href="https://drive.google.com/file/d/1c3fJrQxRtH-6S2qRbeOc9dku24RKqPLF/view?usp=sharing">CS231n</a>: Natural Language Processing with Classificaion and Vector Spaces
+<b>&nbsp;&middot;&nbsp;
