@@ -13,7 +13,7 @@ Here is a non-exhaustive list of my non-research and college projects. My resear
 	</li><br>
 	<li>
 		<b>U-Net Flood Mapping #2</b>: Implemented U-Net architecture for segmentation in flood mapping data collected from <a href = "https://browser.dataspace.copernicus.eu/">Copernicus</a> website. Evaluated different metrics to analyze the performance of the model such as IOU score <br>
-		<a href=""><div class="color-button">paper</div></a><a href="project_1.pdf"><div class="color-button">report</div></a><a href=""><div class="color-button">code</div></a>
+		<a href="https://github.com/gobind-singh23/india-flood-mapping-unet"><div class="color-button">code</div></a>
 	</li><br>
 
 </ul>
