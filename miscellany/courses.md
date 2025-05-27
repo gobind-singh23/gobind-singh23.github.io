@@ -30,5 +30,5 @@ permalink: /miscellany/courses/
 
 
 <h2>Coursera</h2>
-<a href="https://drive.google.com/file/d/1c3fJrQxRtH-6S2qRbeOc9dku24RKqPLF/view?usp=sharing">CS231n</a>: Natural Language Processing with Classificaion and Vector Spaces
+<a href="https://drive.google.com/file/d/1c3fJrQxRtH-6S2qRbeOc9dku24RKqPLF/view?usp=sharing">Coursera Certificate</a>: Natural Language Processing with Classificaion and Vector Spaces
 <b>&nbsp;&middot;&nbsp;
