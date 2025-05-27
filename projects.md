@@ -26,7 +26,6 @@ Here is a non-exhaustive list of my non-research and college projects. My resear
 	<li>
 		<b>Arrhythmia Detection in ECG data</b>: Used MIT-BIH dataset to train a CNN and SVM classifier to detect arrhythmia in ECG data. This was done as a course project. <br>
 		<img src="./project_files/arrhythmia-detection_gobind.png" alt="Poster" style="max-width: 100%; height: auto;">
-{% include image.html url="./project_files/arrhythmia-detection_gobind.png" caption="Poster" width=300%}
 		<a href="https://github.com/gobind-singh23/ecg_data-analysis"><div class="color-button">code</div></a>
 	</li><br>
 
