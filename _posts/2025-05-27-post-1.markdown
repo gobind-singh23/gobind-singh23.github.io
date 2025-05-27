@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Welcome! Explaining .md files and how to make them pretty
-date: 2018-05-27 13:01:00
+date: 2025-05-27 13:01:00
 description: An apt description of your post
 categories: [Learning]
 ---
