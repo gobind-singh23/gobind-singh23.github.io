@@ -1,17 +1,6 @@
----
-layout: post
-title: Welcome! Explaining .md files and how to make them pretty
-date: 2025-05-27 13:01:00
-description: An apt description of your post
-categories: [Learning]
----
+# Markdown Cheat Sheet
 
-Hey! This is my first blog post and I'll be teaching how to use markdown language to make your notes cleaner and easy to read. This post is inspired by the blog [Markdown Guide](https://www.markdownguide.org/getting-started/) and a random cheatsheet. I am writing this down while figuring out how to create this jekyll based github pages site.
 
-## How does markdown work?
-The short answer is that you need a Markdown application capable of processing the Markdown file. The Markdown application converts the `.md` file into a `.html` file and then can be viewed in a web browser or combined wiht a style sheet and printed.
-
-# HOW TO USE MARKDOWN
 
 ## Basic Syntax
 
@@ -126,7 +115,3 @@ H~2~O
 ### Superscript
 
 X^2^
-
-
-Here is a download link to the cheatsheet mentioned: <a href="../blog_files/markdown-cheat-sheet.md" download>Download File</a>
-
