@@ -7,8 +7,12 @@ permalink: /about/
 {% include image.html url="/images/profile.jpg" caption="me!" width=300 align="right" %}
 
 
-Hi! I'm Gobind Singh, an incoming 4th year student studying Computer Science at [BITS Pilani](https://www.bits-pilani.ac.in), Pilani Campus. I've spent quite a lot of time here in college dwelving into Computer Science reseach areas like Machine Learning, Deep Learning and LLMs (and playing lots of basketball). I primarily got experience in fundamental ML, DL by doing courses and loved to continue reading a lot of research papers. I interned at [IIIT-Bangalore](https://www.iiitb.ac.in/), under Prof. Uttam Kumar and learnt different problems in the domain of Continual Learning. I later interned at [DeepTekAI](https://www.deeptek.ai/), [CSIR-CEERI](https://www.ceeri.res.in/) under Dr Sumeet Sourav, working with multimodal ECG data. I also got a bit of software engineering experience at [Tekenlight Solutions Pvt ltd](www.tekenlight.com).
+## About Me
 
-I am a p
+Hi! I'm **Gobind Singh**, an incoming 4th-year Computer Science undergraduate at [BITS Pilani, Pilani Campus](https://www.bits-pilani.ac.in). Over the past few years, I've developed a deep passion for **Machine Learning**, **Deep Learning**, and **Large Language Models** through academic courses, hands-on projects, and extensive research paper exploration.
 
-Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.
+I've had the opportunity to intern at leading institutions such as [IIIT-Bangalore](https://www.iiitb.ac.in) under Prof. Uttam Kumar, where I explored problems in **Continual Learning**, and at [DeepTekAI](https://www.deeptek.ai) and [CSIR-CEERI](https://www.ceeri.res.in/) with Dr. Sumeet Sourav, where I worked on multimodal **ECG data analysis**. Additionally, I gained practical software engineering experience during my internship at [Tekenlight Solutions Pvt. Ltd.](http://www.tekenlight.com).
+
+I thrive on solving challenging problems, especially through collaboration. I’m particularly passionate about the intersection of **AI and Healthcare** and aspire to build a startup in this space. In the early stages of my career, I hope to work at a fast-paced startup to gain holistic experience—both technical and strategic.
+
+Beyond academics, I’m a **high-energy individual** with a deep love for **basketball**. I've had the privilege of captaining my college team and leading us to multiple victories. I also enjoy engaging in thoughtful discussions—be it about strategy, popular theories, or a dash of philosophy.
