@@ -4,7 +4,7 @@ permalink: /projects/
 title: Projects
 ---
 
-Here is a non-exhaustive list of my non-research and college projects. My research work can be found <a href="/research">here</a>. You can also check out my Github profile <a href="">here</a> for a complete list of my projects.
+Here is a non-exhaustive list of my non-research and college projects. My research work can be found <a href="/research">here</a>. You can also check out my Github profile <a href="https://github.com/gobind-singh23/">here</a> for a complete list of my projects.
 
 <ul>
 	<li>
@@ -12,8 +12,13 @@ Here is a non-exhaustive list of my non-research and college projects. My resear
 		<a href="https://github.com/gobind-singh23/compiler-construction"><div class="color-button">code</div></a>
 	</li><br>
 	<li>
-		<b>U-Net Flood Mapping #2</b>: Implemented U-Net architecture for segmentation in flood mapping data collected from <a href = "https://browser.dataspace.copernicus.eu/">Copernicus</a> website. Evaluated different metrics to analyze the performance of the model such as IOU score <br>
+		<b>U-Net Flood Mapping </b>: Implemented U-Net architecture for segmentation in flood mapping data collected from <a href = "https://browser.dataspace.copernicus.eu/">Copernicus</a> website. Evaluated different metrics to analyze the performance of the model such as IOU score <br>
+		<img src="./project_files/flood-mapping.png" alt="U-Net Flood Mapping Project" style="max-width: 100%; height: auto;">
 		<a href="https://github.com/gobind-singh23/india-flood-mapping-unet"><div class="color-button">code</div></a>
 	</li><br>
-
+	<li>
+		<b>College Coding</b>: Created a simple streamlit application that web scrapes (manual) data from codeforces api endpoints and populates a mongodb database. The data is then used to further process queries in different formats. It also uses an index to bring out similar questions from a user pasted codeforces question. Used a publicly available dataset to implement this feature. Working on this more currently to make it look better :).<br>
+		<img src="./project_files/flood-mapping.png" alt="U-Net Flood Mapping Project" style="max-width: 100%; height: auto;">
+		<a href="https://github.com/gobind-singh23/india-flood-mapping-unet"><div class="color-button">code</div></a>
+	</li><br>
 </ul>
