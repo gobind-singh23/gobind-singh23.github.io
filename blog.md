@@ -8,6 +8,7 @@ Hey there! I'm learning and I find the best way to learn is to write my scramble
 I also commit a lot of mistakes and I write about my takes on it... feel free to hit me up if you think otherwise... 
 I have made it easier for you to read my stuff via <a href="{{site.baseurl}}/categories/">category</a>
 
+{% assign year = "" %}
 <ul class="listing">
 {% for post in site.posts %}
   {% capture y %}{{post.date | date:"%Y"}}{% endcapture %}
