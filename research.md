@@ -19,7 +19,7 @@ Research is a field I've spent a lot of time in but struggled to get any real ou
 		<b>Activation Steering in LLMs for Dark Pattern Mitigation</b><br>
 		BITS Pilani, 1 month<br>
 		<i><a href = "https://kudhru.github.io/">Dhruv Kumar</a> </i><br>
-		<a href="https://docs.google.com/presentation/d/10NgtO4EdhrowSh2Rh6x_XlBwrToKNsQnAs85LuSiaCE/edit?usp=sharing"><div class="color-button">report</div></a><a href=""><div class="color-button">code</div></a>
+		<a href="https://docs.google.com/presentation/d/10NgtO4EdhrowSh2Rh6x_XlBwrToKNsQnAs85LuSiaCE/edit?usp=sharing"><div class="color-button">report</div></a><a href="https://github.com/gobind-singh23/activation-steering-darkbench"><div class="color-button">code</div></a>
 	</li><br>
 </ul>
 
