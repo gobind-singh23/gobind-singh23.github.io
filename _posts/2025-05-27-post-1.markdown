@@ -128,5 +128,5 @@ H~2~O
 X^2^
 
 
-Here is a download link to the cheatsheet mentioned: <a href="../blog_files/markdown-cheat-sheet.md" download>Download File</a>
+Here is a download link to the cheatsheet mentioned: <a href="../blog_files/markdown-cheat-sheet.md">Download File</a>
 
