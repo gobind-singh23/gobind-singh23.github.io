@@ -8,11 +8,11 @@ Here is a non-exhaustive list of my non-research and college projects. My resear
 
 <ul>
 	<li>
-		<b>Lexical Analyzer and Parser</b>: Implemented a lexical analyzer and parser with error recovery (LL-1) from scratch! This project was a part of the compiler construction course offered here at BITS Pilani. The lexical analyzer created tokens for the parser and was done for a particular language given by our course instructor. 
-		<a href=""><div class="color-button">paper</div></a><a href="project_1.pdf"><div class="color-button">report</div></a><a href=""><div class="color-button">code</div></a>
+		<b>Lexical Analyzer and Parser</b>: Implemented a lexical analyzer and parser with error recovery (LL-1) from scratch! This project was a part of the compiler construction course offered here at BITS Pilani. The lexical analyzer created tokens for the parser and was done for a particular language given by our course instructor.<br>
+		<a href="https://github.com/gobind-singh23/compiler-construction"><div class="color-button">code</div></a>
 	</li><br>
 	<li>
-		<b>Project title #2</b>: Give a brief description of your second project here. You can link the relevant research paper(s), report, code repository and any other detail(s) by editing <i>projects.md</i> file<br>
+		<b>U-Net Flood Mapping #2</b>: Implemented U-Net architecture for segmentation in flood mapping data collected from <a href = "https://browser.dataspace.copernicus.eu/">Copernicus</a> website. Evaluated different metrics to analyze the performance of the model such as IOU score <br>
 		<a href=""><div class="color-button">paper</div></a><a href="project_1.pdf"><div class="color-button">report</div></a><a href=""><div class="color-button">code</div></a>
 	</li><br>
 
