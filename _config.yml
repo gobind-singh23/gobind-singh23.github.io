@@ -4,8 +4,7 @@ general_email: codersingh23@gmail.com
 academic_email: f20220083@pilani.bits-pilani.ac.in
 
 description: > # this means to ignore newlines until "baseurl:"
-  I love writing code, solving problems, and learning new things. I also love playing
-  basketball a lot. 
+  I love writing code, solving problems, and learning new things.
 
 baseurl: "/" # the subpath of your site, e.g. /blog/
 
