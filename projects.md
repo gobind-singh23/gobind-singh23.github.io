@@ -19,6 +19,7 @@ Here is a non-exhaustive list of my non-research and college projects. My resear
 	<li>
 		<b>College Coding</b>: Created a simple streamlit application that web scrapes (manual) data from codeforces api endpoints and populates a mongodb database. The data is then used to further process queries in different formats. It also uses an index to bring out similar questions from a user pasted codeforces question. Used a publicly available dataset to implement this feature. Working on this more currently to make it look better :).<br>
 		<img src="{{site.baseurl}}/project_files/college-coding-1.png" alt="Problem Retriever" style="max-width: 100%; height: auto;">
+		[Problem Retriever](/project_files/college-coding-1.png)
 		<img src="{{site.baseurl}}/project_files/college-coding-2.png" alt="Rank Queries" style="max-width: 100%; height: auto;">
 		<a href="https://github.com/gobind-singh23/collegecoding"><div class="color-button">code</div></a>
 		<a href = "./project_files/IR_Project_Report.pdf"><div class = "color-button">pdf</div></a>
