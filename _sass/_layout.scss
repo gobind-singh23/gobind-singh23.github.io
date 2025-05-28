@@ -1,14 +1,16 @@
 /**
  * Site footer
  */
-.site-footer {
-    border-top: 1px solid $grey-color-light;
+ .site-footer {
+    border-top: 1px solid $border-color;
     padding: $spacing-unit 0;
+    background-color: $card-background;
 }
 
 .footer-heading {
     font-size: 18px;
     margin-bottom: $spacing-unit / 2;
+    color: $text-color;
 }
 
 .contact-list,
@@ -66,8 +68,6 @@
     }
 }
 
-
-
 /**
  * Page content
  */
@@ -77,6 +77,7 @@
 
 .page-heading {
     font-size: 20px;
+    color: $text-color;
 }
 
 .post-list {
@@ -85,6 +86,10 @@
 
     > li {
         margin-bottom: $spacing-unit;
+        padding: 20px;
+        background-color: $card-background;
+        border-radius: 8px;
+        border: 1px solid $border-color;
     }
 }
 
@@ -96,9 +101,12 @@
 .post-link {
     display: block;
     font-size: 24px;
+    color: $blue-color-light;
+    
+    &:hover {
+        color: lighten($blue-color-light, 10%);
+    }
 }
-
-
 
 /**
  * Posts
@@ -108,15 +116,14 @@
 }
 
 h1 /* .post-title */ {
-/*    font-size: 42px; */
     margin-top: 10px;
     letter-spacing: -1px;
     line-height: 1;
-		font-family: 'Titillium Web', sans-serif;
-		color: $blue-color-dark;
+    font-family: 'Titillium Web', sans-serif;
+    color: $blue-color-light;
 
     @include media-query($on-laptop) {
-/*        font-size: 36px; */
+        // Responsive adjustments
     }
 }
 
@@ -124,64 +131,73 @@ h1 /* .post-title */ {
     margin-bottom: $spacing-unit;
 
     h2 {
-		font-family: 'Titillium Web', sans-serif;
-	    font-weight: 500;
-/*        font-size: 32px; */
+        font-family: 'Titillium Web', sans-serif;
+        font-weight: 500;
+        color: $blue-color-light;
 
         @include media-query($on-laptop) {
-/*            font-size: 28px; */
+            // Responsive adjustments
         }
     }
 
     h3 {
-		font-style: italic;
+        font-style: italic;
         font-weight: 500;
-/*        font-size: 26px; */
+        color: $text-color;
 
         @include media-query($on-laptop) {
-/*            font-size: 22px; */
+            // Responsive adjustments
         }
     }
 
     h4 {
-/*       font-size: 20px; */
+        color: $text-color;
 
         @include media-query($on-laptop) {
-/*            font-size: 18px; */
+            // Responsive adjustments
         }
     }
 }
 
-.footnotes ol li {list-style-type:decimal;}
-.footnotes ol {font-size:.85em; color:#666666;}	
-	
+.footnotes ol li {
+    list-style-type: decimal;
+}
+
+.footnotes ol {
+    font-size: .85em; 
+    color: $grey-color;
+}
+
 html {
-  overflow-y: scroll;
+    overflow-y: scroll;
 }
 
 ul.listing {
-	list-style-type: none;
-	margin-left: 0px;
+    list-style-type: none;
+    margin-left: 0px;
 }
 
 ul.listing li.listing-seperator {
-	padding-top: 15px;
-	font-weight: bold;
-	font-family: 'Titillium Web', sans-serif;
-	font-size: 1.17em;
+    padding-top: 15px;
+    font-weight: bold;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 1.17em;
+    color: $text-color;
 }
 
 ul.listing li.listing-item time {
-
-	color: #333;
-	font-weight: 500;
-	text-transform: uppercase;
-	padding-right: 10px;
+    color: $grey-color;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding-right: 10px;
 }
 
 ul.listing li.listing-item a {
-	color: $blue-color-dark;
-	font-weight: 400;
-	font-family: 'Titillium Web', sans-serif;
+    color: $blue-color-light;
+    font-weight: 400;
+    font-family: 'Titillium Web', sans-serif;
+    
+    &:hover {
+        color: lighten($blue-color-light, 10%);
+    }
 }
-
