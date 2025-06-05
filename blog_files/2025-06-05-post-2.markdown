@@ -1,7 +1,7 @@
 ---
 layout: post
 title: About writing!
-date: 2025-06-05 22:26:00
+date: 2025-06-04 22:26:00
 description: A post about why writing down is important
 categories: [Learning]
 ---
