@@ -33,7 +33,7 @@ const timeline = defineCollection({ loader: glob({ pattern: '**/*.{md,mdx}', bas
 }) });
 const now = defineCollection({ loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/now' }), schema: base });
 const hobbies = defineCollection({ loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/hobbies' }), schema: base.extend({
-  category: z.enum(['Travel', 'Basketball', 'Playing Cards', 'Movies & Series', 'Books', 'Other']),
+  category: z.enum(['Travel', 'Basketball', 'Playing Cards', 'Movies & Series', 'Books', 'Anime', 'Other']),
   icon: z.string().optional(),
   gallery: z.array(z.string()).default([]),
 }) });
