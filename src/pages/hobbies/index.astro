@@ -1,0 +1,6 @@
+---
+import { getCollection } from 'astro:content'; import BaseLayout from '../../layouts/BaseLayout.astro'; import PageHeader from '../../components/PageHeader.astro'; import HobbyStory from '../../components/HobbyStory.astro';
+const entries = await getCollection('hobbies');
+---
+<BaseLayout title="Hobbies — Gobind Singh"><section class="container pb-10 pt-20 lg:pt-32"><PageHeader eyebrow="Hobbies" title="The things I do when I’m not working." description="A long scroll through travel, basketball, cards, movies, books, and the interests that make life feel bigger than a job title." /><div class="flex flex-wrap gap-2 text-xs text-[var(--muted)]">{entries.map((entry) => <a class="rounded-full border rule px-3 py-1.5 hover:bg-[var(--accent-soft)]" href={`#${entry.id}`}>{entry.data.icon} {entry.data.category}</a>)}</div></section>{entries.map((entry, index) => <HobbyStory entry={entry} index={index} />)}</BaseLayout>
+<script>const stories = document.querySelectorAll('.hobby-story'); const observer = new IntersectionObserver((entries) => entries.forEach((entry) => entry.isIntersecting && entry.target.classList.add('is-visible')), { threshold: 0.12 }); stories.forEach((story) => observer.observe(story));</script>

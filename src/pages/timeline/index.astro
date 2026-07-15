@@ -1,0 +1,5 @@
+---
+import { getCollection } from 'astro:content'; import BaseLayout from '../../layouts/BaseLayout.astro'; import PageHeader from '../../components/PageHeader.astro';
+const entries = (await getCollection('timeline')).sort((a,b) => (a.data.date?.getTime() ?? 0) - (b.data.date?.getTime() ?? 0));
+---
+<BaseLayout title="Career — Gobind Singh"><section class="container max-w-4xl py-20 lg:py-32"><PageHeader eyebrow="Career" title="Education and work so far." description="The places where I’ve studied, built, and grown as an engineer." /><div class="border-l rule">{entries.map((entry) => <article class="relative pb-12 pl-8 last:pb-0"><span class="absolute -left-[5px] top-2 h-2.5 w-2.5 rounded-full bg-[var(--accent)]"></span><p class="eyebrow">{entry.data.kind} · {entry.data.date?.getFullYear()}</p><h2 class="serif mt-2 text-3xl">{entry.data.title}</h2><p class="mt-1 text-[var(--muted)]">{entry.data.organization}</p><p class="mt-4">{entry.data.description}</p></article>)}</div></section></BaseLayout>

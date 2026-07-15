@@ -1,0 +1,5 @@
+---
+import { getCollection, render } from 'astro:content'; import BaseLayout from '../../layouts/BaseLayout.astro'; import PageHeader from '../../components/PageHeader.astro';
+const entry = (await getCollection('now'))[0]; const { Content } = await render(entry);
+---
+<BaseLayout title="Now — Gobind Singh"><section class="container py-20 lg:py-32"><PageHeader eyebrow="Now" title="What I’m up to now." description="Inspired by Derek Sivers. This page is intentionally editable from one Markdown file." /><div class="prose"><Content /></div></section></BaseLayout>

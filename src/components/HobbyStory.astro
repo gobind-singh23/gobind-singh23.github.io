@@ -1,0 +1,22 @@
+---
+import HobbyPhotoRail from './HobbyPhotoRail.astro';
+import { render } from 'astro:content';
+const { entry, index = 0 } = Astro.props;
+const { Content } = await render(entry);
+---
+<section id={entry.id} class={`hobby-story border-t rule py-20 lg:py-28 ${index % 2 ? 'bg-[var(--surface)]' : ''}`}>
+  <div class="container grid gap-10 lg:grid-cols-[.8fr_1.2fr] lg:items-start">
+    <div class="hobby-copy lg:sticky lg:top-32">
+      <p class="text-5xl">{entry.data.icon}</p>
+      <p class="eyebrow mt-8">{entry.data.category}</p>
+      <h2 class="serif mt-3 text-5xl leading-none sm:text-7xl">{entry.data.title}</h2>
+      <p class="mt-5 max-w-md text-lg text-[var(--muted)]">{entry.data.description}</p>
+      <a class="mt-7 inline-block text-sm font-semibold text-[var(--accent)]" href={`/hobbies/${entry.id}/`}>Open this hobby →</a>
+    </div>
+    <div class="relative z-10">
+      <div class="prose"><Content /></div>
+      <HobbyPhotoRail gallery={entry.data.gallery} title={entry.data.title} />
+      <p class="mt-1 text-xs text-[var(--muted)]">Swipe sideways to browse photos from this topic.</p>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,4 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'; import PageHeader from '../../components/PageHeader.astro';
+---
+<BaseLayout title="Search — Gobind Singh"><section class="container py-20 lg:py-32"><PageHeader eyebrow="Search" title="Find something in the archive." description="Search projects, articles, poems, books, photos, and timeline entries." /><div id="pagefind-search" class="min-h-48"></div></section><script is:inline src="/pagefind/pagefind-ui.js"></script><script is:inline>window.addEventListener('DOMContentLoaded', () => new PagefindUI({ element: '#pagefind-search', showSubResults: true }));</script></BaseLayout>

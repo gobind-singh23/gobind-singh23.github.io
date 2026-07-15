@@ -1,0 +1,5 @@
+---
+import { getCollection } from 'astro:content'; import BaseLayout from '../../layouts/BaseLayout.astro'; import PageHeader from '../../components/PageHeader.astro';
+const entries = await getCollection('writing'); const categories = [...new Set(entries.flatMap((entry) => entry.data.categories || []))];
+---
+<BaseLayout title="Categories — Gobind Singh"><section class="container py-20 lg:py-32"><PageHeader eyebrow="Writing" title="Browse by category." /><div class="grid gap-5 sm:grid-cols-2">{categories.map((category) => <div class="card p-6"><h2 class="serif text-3xl">{category}</h2>{entries.filter((entry) => entry.data.categories?.includes(category)).map((entry) => <a class="mt-4 block text-sm text-[var(--accent)]" href={`/blog/${entry.id}/`}>{entry.data.title} →</a>)}</div>)}</div></section></BaseLayout>

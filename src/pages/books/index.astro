@@ -1,0 +1,5 @@
+---
+import { getCollection } from 'astro:content'; import BaseLayout from '../../layouts/BaseLayout.astro'; import PageHeader from '../../components/PageHeader.astro';
+const entries = await getCollection('books');
+---
+<BaseLayout title="Books — Gobind Singh"><section class="container py-20 lg:py-32"><PageHeader eyebrow="Books" title="A bookshelf in progress." description="Currently reading, finished, and books I want to return to." /><div class="grid gap-5 md:grid-cols-2">{entries.map((entry) => <article class="card p-7"><p class="eyebrow">{entry.data.state}</p><h2 class="serif mt-3 text-3xl">{entry.data.title}</h2><p class="mt-2 text-[var(--muted)]">{entry.data.author}</p>{entry.data.progress !== undefined && <div class="mt-6"><div class="mb-2 flex justify-between text-xs text-[var(--muted)]"><span>Progress</span><span>{entry.data.progress}%</span></div><div class="h-1.5 rounded-full bg-[var(--accent-soft)]"><div class="h-full rounded-full bg-[var(--accent)]" style={`width: ${entry.data.progress}%`}></div></div></div>}<div class="prose mt-6 text-sm"><p>{entry.data.description}</p></div></article>)}</div></section></BaseLayout>

@@ -1,0 +1,6 @@
+---
+import { getCollection } from 'astro:content'; import BaseLayout from '../../layouts/BaseLayout.astro'; import PageHeader from '../../components/PageHeader.astro'; import EntryCard from '../../components/EntryCard.astro';
+const writing = await getCollection('writing'); const poetry = await getCollection('poetry');
+const entries = [...writing.map((entry) => ({ entry, href: `/blog/${entry.id}/`, eyebrow: 'Writing' })), ...poetry.map((entry) => ({ entry, href: `/poetry/${entry.id}/`, eyebrow: 'Poetry' }))].sort((a,b) => (b.entry.data.date?.getTime() ?? 0) - (a.entry.data.date?.getTime() ?? 0));
+---
+<BaseLayout title="Words — Gobind Singh"><section class="container py-20 lg:py-32"><PageHeader eyebrow="Words" title="Things I’m learning, thinking about, and trying to say." description="Writing and poetry in one place — technical notes, personal observations, and poems with a little more room around them." /><div class="mb-10 flex items-center justify-between gap-4"><div class="words-switch text-sm"><span class="rounded-full bg-[var(--surface)] px-4 py-2 font-semibold">Everything</span></div><span class="text-sm text-[var(--muted)]">{entries.length} entries</span></div><div class="grid gap-5 md:grid-cols-2">{entries.map(({ entry, href, eyebrow }) => <EntryCard entry={entry} href={href} eyebrow={eyebrow} />)}</div></section></BaseLayout>

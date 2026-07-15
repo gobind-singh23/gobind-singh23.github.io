@@ -1,0 +1,6 @@
+---
+import { getCollection, render } from 'astro:content'; import BaseLayout from '../../layouts/BaseLayout.astro';
+export async function getStaticPaths() { return (await getCollection('takes')).filter((entry) => !entry.data.hidden).map((entry) => ({ params: { slug: entry.id }, props: { entry } })); }
+const { entry } = Astro.props; const { Content } = await render(entry); const date = entry.data.date?.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+---
+<BaseLayout title={`${entry.data.title} — Takes`} description={entry.data.description}><article class="container py-20 lg:py-32"><div class="mx-auto max-w-3xl"><div class="flex flex-wrap items-center gap-3"><p class="eyebrow">{entry.data.type}</p>{entry.data.topic && <span class="rounded-full bg-[var(--accent-soft)] px-3 py-1 text-xs text-[var(--accent)]">{entry.data.topic}</span>}{date && <time class="text-sm text-[var(--muted)]">{date}</time>}</div><h1 class="serif mt-6 text-6xl leading-[.95] sm:text-8xl">{entry.data.title}</h1><p class="mt-7 text-xl text-[var(--muted)]">{entry.data.description}</p><div class="prose mt-14"><Content /></div><a class="mt-14 inline-block text-sm text-[var(--accent)]" href="/takes/">← All takes</a></div></article></BaseLayout>

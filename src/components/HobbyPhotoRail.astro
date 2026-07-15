@@ -1,0 +1,6 @@
+---
+const { gallery = [], title } = Astro.props;
+---
+<div class="hobby-rail" aria-label={`${title} photo gallery`}>
+  {gallery.length ? gallery.map((src, index) => <figure class="hobby-photo"><img src={src} alt={`${title} photo ${index + 1}`} loading="lazy" /></figure>) : <>{[1, 2, 3].map((slot) => <figure class="hobby-photo hobby-photo-placeholder"><span>{slot === 1 ? 'Add photos here' : 'Photo slot'}</span><small>gallery: ["/images/your-photo.jpg"]</small></figure>)}</>}
+</div>

@@ -1,0 +1,6 @@
+---
+import { getCollection, render } from 'astro:content'; import BaseLayout from '../../layouts/BaseLayout.astro';
+export async function getStaticPaths() { return (await getCollection('projects')).filter((entry) => !entry.data.hidden).map((entry) => ({ params: { slug: entry.id }, props: { entry } })); }
+const { entry } = Astro.props; const { Content } = await render(entry);
+---
+<BaseLayout title={`${entry.data.title} — Gobind Singh`} description={entry.data.description} image={entry.data.image}><article class="container py-20 lg:py-32"><p class="eyebrow mb-5">Project case study</p><h1 class="serif max-w-4xl text-6xl leading-[.95] sm:text-8xl">{entry.data.title}</h1><p class="mt-7 max-w-2xl text-xl text-[var(--muted)]">{entry.data.description}</p><div class="mt-8 flex flex-wrap gap-3">{entry.data.github && <a class="rounded-full bg-[var(--accent)] px-5 py-3 text-sm font-semibold text-white" href={entry.data.github}>GitHub ↗</a>}{entry.data.live && <a class="rounded-full border rule px-5 py-3 text-sm font-semibold" href={entry.data.live}>Open project ↗</a>}</div>{entry.data.image && <img class="mt-14 max-h-[560px] w-full rounded-2xl object-cover" src={entry.data.image} alt={entry.data.title} />}<div class="prose mt-14"><Content /></div></article></BaseLayout>

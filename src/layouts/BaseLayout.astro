@@ -1,0 +1,36 @@
+---
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import CommandPalette from '../components/CommandPalette.astro';
+import { getCollection } from 'astro:content';
+const { title = 'Gobind Singh — Digital Home', description = 'The digital home of Gobind Singh: software engineer, researcher, writer, and lifelong learner.', image } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const [projects, writing, poetry, books, photos, timeline, hobbies, takes] = await Promise.all([getCollection('projects'), getCollection('writing'), getCollection('poetry'), getCollection('books'), getCollection('photos'), getCollection('timeline'), getCollection('hobbies'), getCollection('takes')]);
+const commandItems = [
+  { title: 'Home', url: '/' }, { title: 'Words', url: '/words/' }, { title: 'Hobbies', url: '/hobbies/' }, { title: 'Takes', url: '/takes/' }, { title: 'Projects', url: '/projects/' }, { title: 'Career', url: '/timeline/' }, { title: 'Now', url: '/now/' }, { title: 'Resume', url: '/resume/' }, { title: 'Search archive', url: '/search/' }, { title: 'Open GitHub', url: 'https://github.com/gobind-singh23' },
+  ...projects.filter((entry) => !entry.data.hidden).map((entry) => ({ title: entry.data.title, url: `/projects/${entry.id}/`, group: 'Projects' })), ...writing.filter((entry) => !entry.data.hidden).map((entry) => ({ title: entry.data.title, url: `/blog/${entry.id}/`, group: 'Writing' })), ...poetry.filter((entry) => !entry.data.hidden).map((entry) => ({ title: entry.data.title, url: `/poetry/${entry.id}/`, group: 'Poetry' })), ...books.filter((entry) => !entry.data.hidden).map((entry) => ({ title: entry.data.title, url: '/books/', group: 'Books' })), ...photos.filter((entry) => !entry.data.hidden).map((entry) => ({ title: entry.data.title, url: '/photography/', group: 'Photography' })), ...timeline.filter((entry) => !entry.data.hidden).map((entry) => ({ title: entry.data.title, url: '/timeline/', group: 'Career' })), ...hobbies.filter((entry) => !entry.data.hidden).map((entry) => ({ title: entry.data.title, url: `/hobbies/${entry.id}/`, group: 'Hobbies' })), ...takes.filter((entry) => !entry.data.hidden).map((entry) => ({ title: entry.data.title, url: `/takes/${entry.id}/`, group: 'Takes' })),
+];
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/png" href="/images/icon.png" />
+    <link rel="canonical" href={canonical} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <link rel="alternate" type="application/rss+xml" title="Gobind Singh — Writing" href={new URL('/feed.xml', Astro.site)} />
+    {image && <meta property="og:image" content={new URL(image, Astro.site)} />}
+    <title>{title}</title>
+    <script is:inline>document.documentElement.classList.toggle('dark', localStorage.getItem('theme') === 'dark');</script>
+  </head>
+  <body>
+    <Header />
+    <main><slot /></main>
+    <Footer />
+    <CommandPalette items={commandItems} />
+  </body>
+</html>

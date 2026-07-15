@@ -1,0 +1,5 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'; import PageHeader from '../../components/PageHeader.astro'; import EntryCard from '../../components/EntryCard.astro'; import { getCollection } from 'astro:content';
+const projects = (await getCollection('projects')).filter((entry) => !entry.data.hidden && entry.data.tags?.includes('Research'));
+---
+<BaseLayout title="Research — Gobind Singh"><section class="container py-20 lg:py-32"><PageHeader eyebrow="Research" title="Questions worth investigating." description="Research projects, implementations, and the ideas I keep returning to." /><div class="grid gap-5 md:grid-cols-2">{projects.map((entry) => <EntryCard entry={entry} href={`/projects/${entry.id}/`} eyebrow="Research" />)}</div><div class="prose mt-16"><h2>Research interests</h2><p>Machine learning, large language models, computer vision, distributed systems, systems engineering, and healthcare AI.</p></div></section></BaseLayout>
