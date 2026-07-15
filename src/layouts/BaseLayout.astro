@@ -7,6 +7,12 @@ import { getCollection } from 'astro:content';
 const { title = 'Gobind Singh — Digital Home', description = 'The digital home of Gobind Singh: software engineer, researcher, writer, and lifelong learner.', image } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const [projects, writing, poetry, books, photos, timeline, hobbies, takes] = await Promise.all([getCollection('projects'), getCollection('writing'), getCollection('poetry'), getCollection('books'), getCollection('photos'), getCollection('timeline'), getCollection('hobbies'), getCollection('takes')]);
+const hobbyOrder = ['basketball', 'movies-series', 'books-read', 'playing-cards', 'anime', 'travel'];
+hobbies.sort((a, b) => {
+  const indexA = hobbyOrder.indexOf(a.id);
+  const indexB = hobbyOrder.indexOf(b.id);
+  return (indexA === -1 ? 999 : indexA) - (indexB === -1 ? 999 : indexB);
+});
 const commandItems = [
   { title: 'Home', url: '/' }, { title: 'Words', url: '/words/' }, { title: 'Hobbies', url: '/hobbies/' }, { title: 'Takes', url: '/takes/' }, { title: 'Projects', url: '/projects/' }, { title: 'Career', url: '/timeline/' }, { title: 'Now', url: '/now/' }, { title: 'Resume', url: '/resume/' }, { title: 'Search archive', url: '/search/' }, { title: 'Open GitHub', url: 'https://github.com/gobind-singh23' },
   ...projects.filter((entry) => !entry.data.hidden).map((entry) => ({ title: entry.data.title, url: `/projects/${entry.id}/`, group: 'Projects' })), ...writing.filter((entry) => !entry.data.hidden).map((entry) => ({ title: entry.data.title, url: `/blog/${entry.id}/`, group: 'Writing' })), ...poetry.filter((entry) => !entry.data.hidden).map((entry) => ({ title: entry.data.title, url: `/poetry/${entry.id}/`, group: 'Poetry' })), ...books.filter((entry) => !entry.data.hidden).map((entry) => ({ title: entry.data.title, url: '/books/', group: 'Books' })), ...photos.filter((entry) => !entry.data.hidden).map((entry) => ({ title: entry.data.title, url: '/photography/', group: 'Photography' })), ...timeline.filter((entry) => !entry.data.hidden).map((entry) => ({ title: entry.data.title, url: '/timeline/', group: 'Career' })), ...hobbies.filter((entry) => !entry.data.hidden).map((entry) => ({ title: entry.data.title, url: `/hobbies/${entry.id}/`, group: 'Hobbies' })), ...takes.filter((entry) => !entry.data.hidden).map((entry) => ({ title: entry.data.title, url: `/takes/${entry.id}/`, group: 'Takes' })),

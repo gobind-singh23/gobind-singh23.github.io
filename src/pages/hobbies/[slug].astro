@@ -1,6 +1,32 @@
 ---
-import { getCollection, render } from 'astro:content'; import BaseLayout from '../../layouts/BaseLayout.astro';
-export async function getStaticPaths() { return (await getCollection('hobbies')).map((entry) => ({ params: { slug: entry.id }, props: { entry } })); }
-const { entry } = Astro.props; const { Content } = await render(entry);
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import HobbyPhotoRail from '../../components/HobbyPhotoRail.astro';
+
+export async function getStaticPaths() {
+  return (await getCollection('hobbies')).map((entry) => ({
+    params: { slug: entry.id },
+    props: { entry }
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
 ---
-<BaseLayout title={`${entry.data.title} — Hobbies`}><article class="container py-20 lg:py-32"><div class="mx-auto max-w-3xl"><p class="text-5xl">{entry.data.icon}</p><p class="eyebrow mt-8">{entry.data.category}</p><h1 class="serif mt-4 text-6xl leading-none sm:text-8xl">{entry.data.title}</h1><p class="mt-7 text-xl text-[var(--muted)]">{entry.data.description}</p><div class="prose mt-14"><Content /></div><a class="mt-14 inline-block text-sm text-[var(--accent)]" href="/hobbies/">← All hobbies</a></div></article></BaseLayout>
+
+<BaseLayout title={`${entry.data.title} — Hobbies`}>
+  <article class="container py-20 lg:py-32">
+    <div class="mx-auto max-w-3xl">
+      <p class="text-5xl">{entry.data.icon}</p>
+      <p class="eyebrow mt-8">{entry.data.category}</p>
+      <h1 class="serif mt-4 text-6xl leading-none sm:text-8xl">{entry.data.title}</h1>
+      <p class="mt-7 text-xl text-[var(--muted)]">{entry.data.description}</p>
+      <div class="prose mt-14">
+        <Content />
+      </div>
+      <HobbyPhotoRail gallery={entry.data.gallery} title={entry.data.title} />
+      <p class="mt-1 text-xs text-[var(--muted)]">Swipe sideways to browse photos from this topic.</p>
+      <a class="mt-14 inline-block text-sm text-[var(--accent)]" href="/hobbies/">← All hobbies</a>
+    </div>
+  </article>
+</BaseLayout>

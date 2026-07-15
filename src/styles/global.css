@@ -36,10 +36,10 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .hobby-story.is-visible { opacity: 1; transform: translateY(0); }
 .hobby-story::before { animation: hobby-float 8s ease-in-out infinite; background: var(--sun); border-radius: 999px; content: ''; filter: blur(1px); height: 170px; opacity: .2; position: absolute; right: -60px; top: 12%; width: 170px; }
 .hobby-story:nth-child(even)::before { background: var(--hot); left: -70px; right: auto; top: 35%; }
-.hobby-copy { position: relative; z-index: 1; }
+.hobby-copy { z-index: 1; }
 .hobby-rail { display: flex; gap: 1rem; margin: 2rem 0 0; overflow-x: auto; padding: .5rem 0 1.25rem; scroll-snap-type: x mandatory; scrollbar-width: thin; }
 .hobby-photo { background: var(--accent-soft); border: 1px solid var(--line); border-radius: 22px; flex: 0 0 min(72vw, 290px); height: 220px; overflow: hidden; scroll-snap-align: start; }
-.hobby-photo img { height: 100%; object-fit: cover; width: 100%; }
+.hobby-photo img { height: 100%; object-fit: contain; width: 100%; }
 .hobby-photo-placeholder { align-items: center; color: var(--accent); display: flex; flex-direction: column; justify-content: center; padding: 1rem; text-align: center; }
 .hobby-photo-placeholder span { font-size: 1.25rem; font-weight: 700; }
 .hobby-photo-placeholder small { color: var(--muted); font-size: .68rem; margin-top: .6rem; max-width: 190px; overflow-wrap: anywhere; }
