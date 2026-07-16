@@ -3,9 +3,13 @@ title: Basketball
 description: Playing, watching, arguing about, and learning from the game.
 category: Basketball
 icon: 🏀
+gallery:
+    - /images/basketball/basketball-photo-one.jpg
+    - /images/basketball/basketball-photo-two.jpg    
+    - /images/basketball/basketball-photo-three.jpg
 tags: [Basketball, Sport]
 ---
 
-Basketball has always been one of my favorite ways to compete, collaborate, and reset. I enjoy both playing the game and thinking about the players, teams, eras, and decisions that make it interesting.
+Picked up the ball in 11th standard and have fallen in love with the sport since. I've met some of the best people I know through basketball. I am big Lakers Fan but starting to like the Spurs alot. Hit me up for any 1v1s or pickup games.
 
-My basketball opinions will live in the [Takes](/takes/) section.
+Also challenge my basketball [Takes](/takes/)

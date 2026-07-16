@@ -6,8 +6,6 @@ icon: 🍥
 image: /images/anime/one-piece-gobind.jpg
 gallery:
   - /images/anime/one-piece-gobind.jpg
-  - /images/anime/one-piece-official-key-visual.jpg
-  - /images/anime/one-piece-official-costume-art.jpg
   - /images/anime/one-piece-logo.png
 tags: [Anime, One Piece]
 ---
